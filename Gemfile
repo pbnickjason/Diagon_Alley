@@ -48,6 +48,7 @@ group :development do
 #### EXTRA SPECIAL CUSTOM GEMS ####
 
 gem 'devise'
+gem 'bootstrap-sass'
   
 end
 
