@@ -1,3 +1,16 @@
+== new instructions for postgres
+
+before launching your local test server with rails s:
+
+* bundle install
+though you should have pg gem already
+* rake db:create:all
+to make the new development database
+* rake db:migrate
+to migrate the schema
+* rails s
+should do it
+
 == README
 
 This README would normally document whatever steps are necessary to get the
