@@ -2,3 +2,11 @@
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
+
+<h1><%= @project.title %></h1>
+<br>
+<h2><%= @project.description %></h2>
+<br>
+<h3><%= @project.contents %></h3>
+<br>
+<h4><%= @project.price %></h4>
