@@ -6,13 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
-</body>
-</html>
-
+    
+<!-- the navbar! -->
 <div class="container">
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>">
@@ -25,7 +20,6 @@
 
 <div class="container">
     <h1><%= yield :header %></h1>
-  <%= yield %>
 </div>
 
 <nav class="navbar navbar-inverse">
@@ -59,3 +53,15 @@
     </div>
   </div>
 </nav>
+
+<!-- navbar above, body is rendered within yield below -->
+
+<body>
+
+<%= yield %>
+
+</body>
+    
+    
+</html>
+
