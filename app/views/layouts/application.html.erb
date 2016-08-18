@@ -1,34 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DiagonAlley</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
-</body>
-</html>
-
-<div class="container">
-  <% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %>">
-      <%= value %>
-    </div>
-  <% end %>
-</div>
-
-<%= yield :top_content %>
-
-<div class="container">
-    <h1><%= yield :header %></h1>
-  <%= yield %>
-</div>
-
-<nav class="navbar navbar-inverse">
+  <body>
+  
+  <nav class="navbar navbar-inverse">
   <div class="container">
     <div class="navbar-header">
       <%= link_to 'Diagon Alley', root_path, class: 'navbar-brand' %>
@@ -36,7 +17,9 @@
     <div id="navbar">
       <ul class="nav navbar-nav">
         <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Projects', projects_path %></li>
       </ul>
+        
       <ul class="nav navbar-nav pull-right">
         <% if user_signed_in? %>
           <li class="dropdown">
@@ -57,3 +40,18 @@
     </div>
   </div>
 </nav>
+
+<% flash.each do |name, msg| %>
+  <% if msg.is_a?(String) %>
+    <div class="alert alert-<%= name.to_s == 'notice' ? 'success' : 'danger' %>">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    </div>
+  <% end %>
+<% end %>
+
+      <%= yield %>
+  </body>
+    
+</html>
+
