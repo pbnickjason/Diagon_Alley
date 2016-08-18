@@ -1,5 +1,30 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
+=======
+<head>
+  <title>DiagonAlley</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+    
+<!-- the navbar! -->
+<div class="container">
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
+</div>
+
+<%= yield :top_content %>
+
+<div class="container">
+    <h1><%= yield :header %></h1>
+</div>
+
+>>>>>>> refs/remotes/origin/kit_model_init
 <nav class="navbar navbar-inverse">
   <div class="container">
     <div class="navbar-header">
@@ -8,7 +33,9 @@
     <div id="navbar">
       <ul class="nav navbar-nav">
         <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Projects', projects_path %></li>
       </ul>
+        
       <ul class="nav navbar-nav pull-right">
         <% if user_signed_in? %>
           <li class="dropdown">
@@ -29,17 +56,24 @@
     </div>
   </div>
 </nav>
+<<<<<<< HEAD
 <head>
   <title>DiagonAlley</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+=======
+
+<!-- navbar above, body is rendered within yield below -->
+
+>>>>>>> refs/remotes/origin/kit_model_init
 <body>
 
 <%= yield %>
 
 </body>
+<<<<<<< HEAD
 </html>
 
 <div class="container">
@@ -57,3 +91,9 @@
   <%= yield %>
 </div>
 
+=======
+    
+    
+</html>
+
+>>>>>>> refs/remotes/origin/kit_model_init
