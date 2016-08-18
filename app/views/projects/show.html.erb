@@ -1,12 +1,54 @@
+
+
 <p id="notice"><%= notice %></p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
 
-<h1><%= @project.title %></h1>
-<br>
-<h2><%= @project.description %></h2>
-<br>
-<h3><%= @project.contents %></h3>
-<br>
-<h4><%= @project.price %></h4>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="Jumbotron" style="background-image: url('/img/portfolio/thumbnails/Saturn.jpg');margin-bottom:30px;">
+        <div class="container">
+            <div class="row">
+                <figure class="col-sm-6">
+                    <img src = "/img/portfolio/thumbnails/SlayerCircuit.jpg" style="width: 100%;max-width: 400px;margin:20px;">
+                </figure>
+                <figure class="col-sm-6">
+                    <div class="row text-right">
+                        <h1><%= @project.title %></h1>
+                        <h3><%= @project.summary %></h3>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row">
+            <figure class="col-sm-3" style="outline: 1px solid black;">
+                <div class="text-center">
+                    <h3>Price:</h3>
+                    <h4><%= @project.price %></h4>
+                    <a class="btn btn-primary" href="#" role="button" style="margin-bottom:10px;">Buy</a>
+                </div>
+            </figure>
+            <figure class="col-sm-6">
+                <p><%= @project.description %></p>
+                <h3>Contents</h3>
+                <p><%= @project.contents %></p>
+                <h3>Instructions</h3>
+                <p><%= @project.instructions %></p>
+            </figure>
+            <figure class="col-sm-3">
+                
+            </figure>
+        </div>
+    </section>
+</body>
