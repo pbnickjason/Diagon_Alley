@@ -7,11 +7,13 @@ class ProjectsController < ApplicationController
     all_projects = Project.all
     @projects = Array.new
     all_projects.each do |project|
-        if project.tags.include?(Subject.find(params[:subject]).name)
-            @projects << project
+        begin
+            if project.tags.include?(Subject.find(params[:subject]).name)
+                @projects << project
+            end
+            rescue ActiveRecord::RecordNotFound
+                @projects = all_projects #if subject isn't found somehow, or if 'projects' is clicked
         end
-        rescue ActiveRecord::RecordNotFound
-            
     end
   end
 
