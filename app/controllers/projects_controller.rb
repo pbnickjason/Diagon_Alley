@@ -6,14 +6,15 @@ class ProjectsController < ApplicationController
   def index
     all_projects = Project.all
     @projects = Array.new
-    all_projects.each do |project|
-        begin
-            if project.tags.include?(Subject.find(params[:subject]).name)
+    begin
+        @subject = Subject.find(params[:subject])
+        all_projects.each do |project|
+            if project.tags.include?(@subject.name)
                 @projects << project
             end
-            rescue ActiveRecord::RecordNotFound
-                @projects = all_projects #if subject isn't found somehow, or if 'projects' is clicked
         end
+        rescue ActiveRecord::RecordNotFound
+            @projects = all_projects #if subject isn't found somehow, or if 'projects' is clicked
     end
   end
 
