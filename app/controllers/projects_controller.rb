@@ -10,8 +10,9 @@ class ProjectsController < ApplicationController
         if project.tags.include?(Subject.find(params[:subject]).name)
             @projects << project
         end
+        rescue ActiveRecord::RecordNotFound
+            
     end
-    #@projects = Project.all
   end
 
   # GET /projects/1
