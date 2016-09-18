@@ -4,7 +4,14 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    all_projects = Project.all
+    @projects = Array.new
+    all_projects.each do |project|
+        if project.tags.include?(Subject.find(params[:subject]).name)
+            @projects << project
+        end
+    end
+    #@projects = Project.all
   end
 
   # GET /projects/1

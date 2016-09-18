@@ -50,7 +50,7 @@
             <div class="row no-gutter popup-gallery">
                 <% @subjects.each do |subject| %>
                 <div class="col-lg-4 col-sm-6">
-                    <%=link_to projects_path(subject), :class => 'portfolio-box' do %>
+                    <%=link_to projects_path(:subject => subject.id), :class => 'portfolio-box' do %>
                         <img src=<%=subject.image%> class="img-responsive" alt="">
                         <div class="portfolio-box-caption"> 
                             <div class="portfolio-box-caption-content">

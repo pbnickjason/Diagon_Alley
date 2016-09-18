@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   
   root 'pages#index'
     
-    get "/subject_projects" => "projects#index"
+    get "projects/:id" => "projects#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
