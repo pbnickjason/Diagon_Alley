@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get 'pages/index'
   
   root 'pages#index'
+    
+  get "projects/:id" => "projects#index"
+  get "/workspace/:id" => "workspace#index", as: :workspace
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
