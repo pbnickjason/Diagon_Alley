@@ -5,13 +5,16 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     all_projects = Project.all
+    if params[:search]
+      all_projects = Project.search(params[:search])
+    end
     @projects = Array.new
     begin
         @subject = Subject.find(params[:subject])
         all_projects.each do |project|
             if project.tags.include?(@subject.name)
                 @projects << project
-            end
+            end 
         end
         rescue ActiveRecord::RecordNotFound
             @projects = all_projects #if subject isn't found somehow, or if 'projects' is clicked
