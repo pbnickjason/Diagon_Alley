@@ -22,12 +22,15 @@
                 <%= f.label :remember_me %>
             </div>
             <% end -%>
+            <div class="actions">
+                <%= f.submit "Log in" %>
+            </div>
+            <% end %>
+            
+            <%= render "devise/shared/links" %>
+        </div>
+        <div class="col-sm-6">
+            <h2>Another Image?</h2>
         </div>
     </div>
-    <div class="actions">
-        <%= f.submit "Log in" %>
-    </div>
-    <% end %>
-    
-    <%= render "devise/shared/links" %>
 </section>

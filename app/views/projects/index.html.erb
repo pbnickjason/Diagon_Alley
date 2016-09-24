@@ -6,11 +6,19 @@
 <div class=".container">    
     <div class="row">
         <% @projects.each do |project| %>
-            <div class="col-md-6" style="border: 1px dashed black; border-radius: 7px;text-align: center">
-                <h2><%= link_to "#{project.title}", project %></h2> <br>
-                <%= link_to 'Edit', edit_project_path(project) %>
-                <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <div class="col-sm-6 col-md-offset-1" style="border: 1px solid white; border-radius: 7px">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src = "/img/portfolio/thumbnails/SlayerCircuit.jpg" style="width: 100%;max-width: 400px;margin:5px;">
+                </div>
+                <div class="col-sm-6">
+                    <h2 style="text-align: center"><%= link_to "#{project.title}", project %></h2> <br>
+                    <p><%=project.summary%></p>
+                    <!--<%= link_to 'Edit', edit_project_path(project) %>-->
+                    <!--<%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>-->
+                </div>
             </div>
+        </div>
         <% end %>
     </div>
 </div>
