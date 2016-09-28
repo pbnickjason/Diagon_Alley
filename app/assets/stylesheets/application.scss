@@ -19,6 +19,11 @@
 @import "bootstrap";
 @import 'bootstrap/theme';
 
+/* $font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; */
+/* $font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; */
+	$font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+	$blue: #2255aa;
+	
 html,
 body {
   background-color: black;
@@ -26,11 +31,13 @@ body {
   width: 100%;
 }
 body {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+   font-family: $font-family;
+  color: snow;
 }
 
 hr {
-  border-color: #2255aa;
+  border-color: $blue;
   border-width: 3px;
   max-width: 50px;
 }
@@ -46,7 +53,7 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: #2255aa;
+  color: $blue;
 }
 a:hover,
 a:focus {
@@ -58,7 +65,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: $font-family;
+  color: snow;
 }
 p {
   font-size: 16px;
@@ -66,7 +74,7 @@ p {
   margin-bottom: 20px;
 }
 .bg-primary {
-  background-color: #2255aa;
+  background-color: $blue;
 }
 .bg-dark {
   background-color: #222222;
@@ -87,14 +95,14 @@ aside {
 .navbar-default {
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: $font-family;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
 }
 .navbar-default .navbar-header .navbar-brand {
-  color: #2255aa;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: $blue;
+  font-family: $font-family;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -117,11 +125,11 @@ aside {
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
-  color: #2255aa;
+  color: $blue;
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-  color: #2255aa !important;
+  color: $blue !important;
   background-color: transparent;
 }
 .navbar-default .nav > li.active > a:hover,
@@ -153,7 +161,7 @@ aside {
     border-color: rgba(34, 34, 34, 0.05);
   }
   .navbar-default.affix .navbar-header .navbar-brand {
-    color: #2255aa;
+    color: $blue;
     font-size: 14px;
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
@@ -166,7 +174,7 @@ aside {
   }
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
-    color: #2255aa;
+    color: $blue;
   }
 }
 header {
@@ -276,7 +284,7 @@ header .header-content .header-content-inner p {
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: $font-family;
   padding: 0 15px;
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -305,7 +313,7 @@ header .header-content .header-content-inner p {
   margin: 0 auto 20px;
 }
 .text-primary {
-  color: #2255aa;
+  color: snow;
 }
 .no-gutter > [class*='col-'] {
   padding-right: 0;
@@ -313,8 +321,8 @@ header .header-content .header-content-inner p {
 }
 .btn-default {
   color: #222222;
-  background-color: white;
-  border-color: white;
+  background-color: $blue;
+  border-color: $blue;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
@@ -326,7 +334,7 @@ header .header-content .header-content-inner p {
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
   color: #222222;
-  background-color: #f2f2f2;
+  background-color: $blue;
   border-color: #ededed;
 }
 .btn-default:active,
@@ -352,7 +360,7 @@ fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
-  background-color: white;
+  background-color: $blue;
   border-color: white;
 }
 .btn-default .badge {
@@ -360,9 +368,9 @@ fieldset[disabled] .btn-default.active {
   background-color: #222222;
 }
 .btn-primary {
-  color: white;
-  background-color: #2255aa;
-  border-color: #2255aa;
+  color: snow;
+  background-color: $blue;
+  border-color: $blue;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
@@ -373,8 +381,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-  color: white;
-  background-color: #ee4b28;
+  color: snow;
+  background-color: $blue;
   border-color: #ed431f;
 }
 .btn-primary:active,
@@ -400,17 +408,17 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #2255aa;
-  border-color: #2255aa;
+  background-color: $blue;
+  border-color: $blue;
 }
 .btn-primary .badge {
-  color: #2255aa;
-  background-color: white;
+  color: snow;
+  background-color: $blue;
 }
 .btn {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: $font-family;
   border: none;
-  border-radius: 300px;
+  border-radius: 0px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -437,4 +445,12 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #222222;
+}
+
+.actions {
+	  font-family: $font-family;
+  border: none;
+  border-radius: 0px;
+    color: snow;
+  background-color: $blue;
 }

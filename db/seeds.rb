@@ -6,12 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
+Subject.create(name: 'Space & Physics', image: 'img/portfolio/thumbnails/Saturn.jpg')
+Subject.create(name: 'Robotics & Computer Science', image: 'img/portfolio/thumbnails/Mindstorm.jpg')
+Subject.create(name: 'Engineering & Design', image: 'img/portfolio/thumbnails/Wind_Farm.jpg')
 Subject.create(name: 'Earth Science', image: 'img/portfolio/thumbnails/Volcano.jpg')
 Subject.create(name: 'Life Science', image: 'img/portfolio/thumbnails/Turtle.jpg')
 Subject.create(name: 'Chemistry', image: 'img/portfolio/thumbnails/Luminol.jpg')
-Subject.create(name: 'Space', image: 'img/portfolio/thumbnails/Saturn.jpg')
-Subject.create(name: 'Robotics & Computer Science', image: 'img/portfolio/thumbnails/Mindstorm.jpg')
-Subject.create(name: 'Engineering', image: 'img/portfolio/thumbnails/Wind_Farm.jpg')
 
 Project.create(
     title: 'Slayer Exciter Circuit', 
