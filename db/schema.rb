@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20160916053541) do
     t.datetime "updated_at", null: false
     t.string   "name"
     t.string   "image"
+    t.string   "color"
   end
 
   create_table "users", force: :cascade do |t|

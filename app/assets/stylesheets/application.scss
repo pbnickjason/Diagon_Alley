@@ -71,7 +71,7 @@ h6 {
   color: snow;
 }
 p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -256,6 +256,32 @@ header .header-content .header-content-inner p {
 .service-box p {
   margin-bottom: 0;
 }
+
+.ghost-title {
+  color: white;
+  opacity: 0.9;
+  display: block;
+  background: transparent;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  font-size: 34px;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  width: 100%;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  margin: 0 auto;
+  text-transform: uppercase;
+  transform: translateY(-100%);
+}
+
+.ghost-title:hover .ghost-title {
+	opacity:0;
+}
 .portfolio-box {
   position: relative;
   display: block;
@@ -265,21 +291,6 @@ header .header-content .header-content-inner p {
 .portfolio-box .portfolio-box-caption {
   color: white;
   opacity: 0;
-  display: block;
-  background: rgba(34,85,170, 0.8);
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
-}
-
-.portfolio-box .portfolio-box-caption-show {
-  color: white;
-  opacity: 1;
   display: block;
   background: rgba(34,85,170, 0.8);
   position: absolute;
@@ -308,10 +319,10 @@ header .header-content .header-content-inner p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 22px;
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-  font-size: 18px;
+  font-size: 22px;
 }
 .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
@@ -321,10 +332,10 @@ header .header-content .header-content-inner p {
 }
 @media (min-width: 768px) {
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    font-size: 22px;
+    font-size: 34px;
   }
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    font-size: 22px;
+    font-size: 34px;
   }
 }
 .call-to-action h2 {
