@@ -18,11 +18,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'bootstrap/theme';
-
+/* Define variables here */
 /* $font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; */
 /* $font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; */
 	$font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
 	$blue: #2255aa;
+	$orange: #eb3812;
+
 	
 html,
 body {
@@ -53,11 +55,11 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: $blue;
+  color: white;
 }
 a:hover,
 a:focus {
-  color: #eb3812;
+  color: white;
 }
 h1,
 h2,
@@ -101,14 +103,14 @@ aside {
   transition: all 0.35s;
 }
 .navbar-default .navbar-header .navbar-brand {
-  color: $blue;
+  color: white;
   font-family: $font-family;
   font-weight: 700;
   text-transform: uppercase;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-  color: #eb3812;
+  color: $blue;
 }
 .navbar-default .navbar-header .navbar-toggle {
   font-weight: 700;
@@ -121,7 +123,7 @@ aside {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 13px;
-  color: #222222;
+  color: $blue;
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
@@ -166,7 +168,7 @@ aside {
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
-    color: #eb3812;
+    color: $blue;
   }
   .navbar-default.affix .nav > li > a,
   .navbar-default.affix .nav > li > a:focus {
@@ -274,6 +276,22 @@ header .header-content .header-content-inner p {
   -moz-transition: all 0.35s;
   transition: all 0.35s;
 }
+
+.portfolio-box .portfolio-box-caption-show {
+  color: white;
+  opacity: 1;
+  display: block;
+  background: rgba(34,85,170, 0.8);
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
   width: 100%;
   opacity: 1;
@@ -303,7 +321,7 @@ header .header-content .header-content-inner p {
 }
 @media (min-width: 768px) {
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    font-size: 16px;
+    font-size: 22px;
   }
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     font-size: 22px;
@@ -320,7 +338,7 @@ header .header-content .header-content-inner p {
   padding-left: 0;
 }
 .btn-default {
-  color: #222222;
+  color: snow;
   background-color: $blue;
   border-color: $blue;
   -webkit-transition: all 0.35s;
@@ -333,9 +351,9 @@ header .header-content .header-content-inner p {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #222222;
+  color: snow;
   background-color: $blue;
-  border-color: #ededed;
+  border-color: snow;
 }
 .btn-default:active,
 .btn-default.active,
@@ -365,7 +383,7 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-default .badge {
   color: white;
-  background-color: #222222;
+  background-color: $blue;
 }
 .btn-primary {
   color: snow;
@@ -444,7 +462,7 @@ img::-moz-selection {
   background: transparent;
 }
 body {
-  webkit-tap-highlight-color: #222222;
+  webkit-tap-highlight-color: snow;
 }
 
 .actions {

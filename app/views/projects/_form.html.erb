@@ -1,3 +1,4 @@
+
 <%= form_for(@project) do |f| %>
   <% if @project.errors.any? %>
     <div id="error_explanation">
@@ -41,8 +42,8 @@
 <%= f.text_field :price %>
 <br>
 
-
- <%= f.submit class: 'btn btn-default' %>
+<br>
+ <%= f.submit class: 'btn btn-primary' %>
 
 
 <% end %>
