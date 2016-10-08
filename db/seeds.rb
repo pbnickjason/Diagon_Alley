@@ -27,7 +27,7 @@ Project.create(
     
     instructions: 'Here are instruction to guild you through designing and constructing the Tesla coil and driver', 
     
-    tags: ['Engineering']
+    tags: ['Engineering & Design']
     )
 
 Project.create(
@@ -43,7 +43,7 @@ Project.create(
     
     instructions: 'How to build a city',
     
-    tags: ['Earth Science', 'Engineering']
+    tags: ['Earth Science', 'Engineering & Design']
     )
 
 Project.create(
@@ -75,7 +75,7 @@ Project.create(
     
     instructions: 'How to space.',
     
-    tags:['Space']
+    tags:['Space & Physics']
     )
 
 Project.create(
@@ -91,7 +91,7 @@ Project.create(
     
     instructions: 'How to build a rocket',
     
-    tags:['Space', 'Engineering']
+    tags:['Space & Physics', 'Engineering & Design']
     )
 
 Project.create(
