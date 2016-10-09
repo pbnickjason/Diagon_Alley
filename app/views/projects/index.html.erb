@@ -9,8 +9,8 @@
         <div class="col-sm-3">
             <%= form_tag(projects_path, :method => "get", id: "search-form") do %>
             <%= hidden_field_tag :subject, @subject.id %>
-            <%= text_field_tag :search, params[:search], placeholder: "Search Projects" %>
-            <%= submit_tag "Search" %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search Projects", :style => "color: black" %>
+            <%= submit_tag "Search", :class => "btn btn-primary" %>
             <% end %>
         </div>
         <% else %>
@@ -19,8 +19,8 @@
         </div>
         <div class="col-sm-3">
             <%= form_tag(projects_path, :method => "get", id: "search-form") do %>
-              <%= text_field_tag :search, params[:search], placeholder: "Search Projects" %>
-              <%= submit_tag "Search" %>
+              <%= text_field_tag :search, params[:search], placeholder: "Search Projects", :style => "color: black" %>
+              <%= submit_tag "Search", :class => "btn btn-primary" %>
             <% end %>
             
         </div>
@@ -28,11 +28,13 @@
     </div>
 </div>
 
-<div class=".container">    
-    <div class="row">
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
         <% @projects.each do |project| %>
-        <div class="col-sm-6 col-md-offset-3" style="border: 1px solid white; border-radius: 7px">
-            <div class="row">
+        <div class="row">
+		<div class="col-sm-6 col-md-offset-3" style="border: 1px solid white; border-radius: 0px;">
+            
                 <div class="col-sm-4">
                     <img src = "/img/portfolio/thumbnails/SlayerCircuit.jpg" style="width: 100%;max-width: 400px;margin:5px;">
                 </div>
@@ -45,8 +47,10 @@
                 </div>
             </div>
         </div>
+		<br>
         <% end %>
     </div>
+</div>
 </div>
 <br>
 <div class = "col-sm-12 col-md-offset-3">
