@@ -98,15 +98,4 @@ class ProjectsController < ApplicationController
       params.require(:project).permit(:title, :description, :contents, :price, :summary, :instructions)
     end
     
-    def upload_image
-        
-      #File.open('~/Pictures/electronics-technology-wallpaper-background-0sp.jpg', 'rb') do |file|
-        time = Time.new
-        hash = rand(65535).to_s(16)
-        objKey = "project_images/" + hash.to_s + "-" + time.year + "-" + time.month + "-" + time.day + "-" + time.hour + "-" + time.min
-        #resp = s3.put_object(bucket: 'diagon-alley-devel-storage', key: objKey, body: file)
-      #end
-      obj = project_images.object(objKey)
-      obj.upload_file('/home/quentin/Pictures/electronics-technology-wallpaper-background-0sp.jpg')
-    end
 end
