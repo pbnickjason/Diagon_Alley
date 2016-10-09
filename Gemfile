@@ -51,6 +51,6 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'pg'
     
-    
+gem 'aws-sdk'
 end
 

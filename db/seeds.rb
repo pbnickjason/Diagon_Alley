@@ -7,12 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Subject.create(name: 'Space & Physics', image: 'img/portfolio/thumbnails/Saturn.jpg')
-Subject.create(name: 'Robotics & Computer Science', image: 'img/portfolio/thumbnails/Mindstorm.jpg')
-Subject.create(name: 'Engineering & Design', image: 'img/portfolio/thumbnails/Wind_Farm.jpg')
-Subject.create(name: 'Earth Science', image: 'img/portfolio/thumbnails/Volcano.jpg')
-Subject.create(name: 'Life Science', image: 'img/portfolio/thumbnails/Turtle.jpg')
-Subject.create(name: 'Chemistry', image: 'img/portfolio/thumbnails/Luminol.jpg')
+Subject.create(name: 'Space & Physics', image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/subject_images/Saturn.jpg')
+Subject.create(name: 'Robotics & Computer Science', image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/subject_images/Mindstorm.jpg')
+Subject.create(name: 'Engineering & Design', image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/subject_images/Wind_Farm.jpg')
+Subject.create(name: 'Earth Science', image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/subject_images/Volcano.jpg')
+Subject.create(name: 'Life Science', image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/subject_images/Turtle.jpg')
+Subject.create(name: 'Chemistry', image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/subject_images/Luminol.jpg')
 
 Project.create(
     title: 'Slayer Exciter Circuit', 
@@ -27,11 +27,13 @@ Project.create(
     
     instructions: 'Here are instruction to guild you through designing and constructing the Tesla coil and driver', 
     
-    tags: ['Engineering & Design']
+    tags: ['Engineering & Design'],
+    
+    image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
 
 Project.create(
-    title: 'Create a City', description: 'Joke entry created to populate projects list for testing.', 
+    title: 'Create a City',
     
     description: 'Joke project created to populate projects list for testing.', 
     
@@ -43,7 +45,9 @@ Project.create(
     
     instructions: 'How to build a city',
     
-    tags: ['Earth Science', 'Engineering & Design']
+    tags: ['Earth Science', 'Engineering & Design'],
+    
+    image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
 
 Project.create(
@@ -59,7 +63,9 @@ Project.create(
     
     instructions: 'How to mess with sasquatch',
     
-    tags:['Life Science']
+    tags:['Life Science'],
+    
+    image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
 
 Project.create(
@@ -75,7 +81,9 @@ Project.create(
     
     instructions: 'How to space.',
     
-    tags:['Space & Physics']
+    tags:['Space & Physics'],
+    
+    image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
 
 Project.create(
@@ -91,7 +99,9 @@ Project.create(
     
     instructions: 'How to build a rocket',
     
-    tags:['Space & Physics', 'Engineering & Design']
+    tags:['Space & Physics', 'Engineering & Design'],
+    
+    image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
 
 Project.create(
@@ -107,7 +117,9 @@ Project.create(
     
     instructions: 'How to build a drone.',
     
-    tags:['Robotics & Computer Science']
+    tags:['Robotics & Computer Science'],
+    
+    image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
 
 Project.create(
@@ -123,6 +135,8 @@ Project.create(
     
     instructions: 'How to chemistry.',
     
-    tags:['Chemistry']
+    tags:['Chemistry'],
+    
+    image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
 
