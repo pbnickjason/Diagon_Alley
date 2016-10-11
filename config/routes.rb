@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     
   #get "*path", via: :all, to: "errors#not_found"
   match "/404", :to => "errors#not_found", :via => :all
+  match "/422", :to => "errors#reject", :via => :all
   match "/500", :to => "errors#unexpected", :via => :all
   #get "*all", via: :all, to: "errors#unexpected"
 
