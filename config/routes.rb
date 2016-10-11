@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   get "pages/about" => "pages#about"
     
   get "projects/:id" => "projects#index"
-  get "/workspace/:id" => "workspace#index", as: :workspace  
-
+  get "/workspace/:id" => "workspace#index", as: :workspace
+    
+  get "*path", via: :all, to: "errors#not_found"
+    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

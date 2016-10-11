@@ -4,6 +4,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
+      puts "IT IS HERE!!!!!!!!!!!!"
     all_projects = Project.all
     if params[:search]
       all_projects = Project.search(params[:search])
@@ -16,8 +17,13 @@ class ProjectsController < ApplicationController
                 @projects << project
             end 
         end
-        rescue ActiveRecord::RecordNotFound
-            @projects = all_projects #if subject isn't found somehow, or if 'projects' is clicked
+    rescue ActiveRecord::RecordNotFound
+        if params[:subject].nil?
+            @projects = all_projects
+        else
+            not_found
+        end
+        #@projects = all_projects #if subject isn't found somehow, or if 'projects' is clicked
     end
   end
 
@@ -90,12 +96,20 @@ class ProjectsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
-      @project = Project.find(params[:id])
+        begin
+            @project = Project.find(params[:id])
+        rescue ActiveRecord::RecordNotFound
+            handle_400
+        end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params.require(:project).permit(:title, :description, :contents, :price, :summary, :instructions)
+    end
+    
+    def not_found
+        render :file => "#{Rails.root}/public/404.html",  :status => 404
     end
     
 end
