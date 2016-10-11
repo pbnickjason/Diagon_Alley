@@ -4,7 +4,6 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-      puts "IT IS HERE!!!!!!!!!!!!"
     all_projects = Project.all
     if params[:search]
       all_projects = Project.search(params[:search])
@@ -17,7 +16,7 @@ class ProjectsController < ApplicationController
                 @projects << project
             end 
         end
-    rescue ActiveRecord::RecordNotFound
+    #rescue ActiveRecord::RecordNotFound
         if params[:subject].nil?
             @projects = all_projects
         else

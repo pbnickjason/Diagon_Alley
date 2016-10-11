@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   get "projects/:id" => "projects#index"
   get "/workspace/:id" => "workspace#index", as: :workspace
     
-  get "*path", via: :all, to: "errors#not_found"
+  #get "*path", via: :all, to: "errors#not_found"
+  match "/404", :to => "errors#not_found", :via => :all
+  match "/500", :to => "errors#unexpected", :via => :all
+  #get "*all", via: :all, to: "errors#unexpected"
+
     
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
