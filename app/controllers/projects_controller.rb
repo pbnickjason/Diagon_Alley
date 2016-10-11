@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
                 @projects << project
             end 
         end
-    #rescue ActiveRecord::RecordNotFound
+    rescue ActiveRecord::RecordNotFound
         if params[:subject].nil?
             @projects = all_projects
         else

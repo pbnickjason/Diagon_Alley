@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   resources :projects
   devise_for :users
-  get 'pages/index'
+  #get 'pages/index'
   
   root 'pages#index'
   get "pages/about" => "pages#about"
-    
+  
   get "projects/:id" => "projects#index"
   get "/workspace/:id" => "workspace#index", as: :workspace
+    
+  get "purchases/cart" => "purchases#cart"
     
   #get "*path", via: :all, to: "errors#not_found"
   match "/404", :to => "errors#not_found", :via => :all
