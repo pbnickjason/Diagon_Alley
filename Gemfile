@@ -52,5 +52,6 @@ gem 'bootstrap-sass'
 gem 'pg'
     
 gem 'aws-sdk'
+gem "braintree", "~> 2.67.0"
 end
 
