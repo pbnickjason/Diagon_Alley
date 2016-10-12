@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -50,8 +51,11 @@ group :development do
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'pg'
+
+gem 'bootstrap-slider-rails'  
     
 gem 'aws-sdk'
 gem "braintree", "~> 2.67.0"
+
 end
 
