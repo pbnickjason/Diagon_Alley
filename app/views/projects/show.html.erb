@@ -2,8 +2,8 @@
 
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<%= link_to 'Edit', edit_project_path(@project), style: "color: snow" %> |
+<%= link_to 'Back', projects_path, style: "color: snow" %>
 
 <head>
     <meta charset="utf-8">
@@ -36,7 +36,8 @@
                 <div class="text-center">
                     <h3>Price:</h3>
                     <h4><%= @project.price %></h4>
-                    <a class="btn btn-primary" href="#" role="button" style="margin-bottom:10px;">Buy</a>
+					<!-- Temporarily linking "Buy to Home" -->
+                    <%= button_to 'Buy',root_path, :method => :get, :class => 'btn btn-primary' %>
                 </div>
             </figure>
             <figure class="col-sm-6">
@@ -47,7 +48,7 @@
                 <p><%= @project.instructions %></p>
             </figure>
             <figure class="col-sm-3">
-                <%= link_to "Workspace", workspace_path(@project) %>
+                <%= link_to "Workspace", workspace_path(@project), style: 'color: snow' %>
             </figure>
         </div>
     </section>
