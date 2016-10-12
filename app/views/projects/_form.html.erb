@@ -42,8 +42,17 @@
 <%= f.text_field :price %>
 <br>
 
+
 <br>
  <%= f.submit class: 'btn btn-primary' %>
+
+<%= f.label :picture %>
+<br>
+<%= f.file_field :picture %>
+<br>
+
+ <%= f.submit class: 'btn btn-default' %>
+
 
 
 <% end %>

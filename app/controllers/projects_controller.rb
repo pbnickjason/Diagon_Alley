@@ -38,8 +38,20 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
+    time = Time.new
+    hash = rand(65535).to_s(16)
+    objKey = "project_images/" + hash.to_s + "-" + time.year.to_s + "-" + time.month.to_s + "-" + time.day.to_s + "-" + time.hour.to_s + "-" + time.min.to_s + ".jpg"
+      obj = PROJECT_IMAGES.object(objKey)
+      #obj.upload_file(:file)
+      #File.open(:file, 'rb') do |file|
+      uploaded_io = params[:project][:picture]
+      File.open(uploaded_io.path, 'rb') do |file|
+        obj.put(body: file)
+      end
+    
+    
     @project = Project.new(project_params)
-
+    @project.image = 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/' + objKey
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
@@ -83,6 +95,7 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-        params.require(:project).permit(:title, :description, :contents, :price, :summary, :instructions)
+      params.require(:project).permit(:title, :description, :contents, :price, :summary, :instructions)
     end
+    
 end

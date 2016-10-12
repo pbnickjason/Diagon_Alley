@@ -164,7 +164,7 @@ $("#checkAll").click(function () {
 		<div class="col-sm-6 col-md-offset-3" style="border: 1px solid white; border-radius: 0px;">
             
                 <div class="col-sm-4">
-                    <img src = "/img/portfolio/thumbnails/SlayerCircuit.jpg" style="width: 100%;max-width: 400px;margin:5px;">
+                    <img src = <%= project.image %> style="width: 100%;max-width: 400px;margin:5px;">
                 </div>
                 <div class="col-sm-8">
                     <h2 style="text-align: center"><%= link_to "#{project.title}", project, style: "color:snow;" %></h2> <br>

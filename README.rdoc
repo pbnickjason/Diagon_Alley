@@ -2,35 +2,35 @@
 
 before launching your local test server with rails s:
 
-* bundle install
+* <tt>bundle install</tt>
 though you should have pg gem already
-* rake db:create:all
+* <tt>bundle exec rake db:create:all</tt>
 to make the new development database
-* rake db:migrate
+* <tt>bundle exec rake db:migrate</tt>
 to migrate the schema
-* rails s
+* <tt>bundle exec rake db:seed</tt>
+to seed the database
+* <tt>rails s</tt>
 should do it
 
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
+* use <tt>bundle install</tt> to handle dependancies
 
 * Configuration
 
 * Database creation
 
-* Database initialization
+* bundle exec rake db:reset
+will reseed the database
 
-* How to run the test suite
+* s3 bucket diagon-alley-devel-storage handles image storage
+  
+  For the shell which runs the server the following enviorment variables must be set:
 
-* Services (job queues, cache servers, search engines, etc.)
+  1. <tt>AWS_ACCESS_KEY_ID=</tt> (generated access key)
+  2. <tt>AWS_SECRET_ACCESS_KEY=</tt> (generated secret key)
+  3. <tt>AWS_REGION=us-west-2</tt>
 
 * Deployment instructions
 

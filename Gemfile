@@ -51,7 +51,10 @@ group :development do
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'pg'
+
 gem 'bootstrap-slider-rails'  
     
+gem 'aws-sdk'
+
 end
 
