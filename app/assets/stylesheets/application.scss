@@ -27,18 +27,7 @@
 	$orange: #eb3812;
 
 
-#slider12a .slider-track-high, #slider12c .slider-track-high {
-	background: green;
-}
 
-#slider12b .slider-track-low, #slider12c .slider-track-low {
-	background: red;
-}
-
-#slider12c .slider-selection {
-	background: yellow;
-}
-	
 html,
 body {
   background-color: black;
@@ -107,6 +96,151 @@ aside {
 .no-padding {
   padding: 0;
 }
+
+
+/* ++++++++++BUTTONS++++++++ */
+
+.btn-default {
+  color: snow;
+  background-color: $blue;
+  border-color: $blue;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  color: snow;
+  background-color: $blue;
+  border-color: snow;
+}
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  background-image: none;
+}
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+  background-color: $blue;
+  border-color: white;
+}
+.btn-default .badge {
+  color: white;
+  background-color: $blue;
+}
+.btn-primary {
+  color: snow;
+  background-color: $blue;
+  border-color: $blue;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: snow;
+  background-color: $blue;
+  border-color: #ed431f;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: $blue;
+  border-color: $blue;
+}
+.btn-primary .badge {
+  color: snow;
+  background-color: $blue;
+}
+.btn {
+  font-family: $font-family;
+  border: none;
+  border-radius: 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.btn-xl {
+  padding: 15px 30px;
+}
+::-moz-selection {
+  color: white;
+  text-shadow: none;
+  background: #222222;
+}
+::selection {
+  color: white;
+  text-shadow: none;
+  background: #222222;
+}
+img::selection {
+  color: white;
+  background: transparent;
+}
+img::-moz-selection {
+  color: white;
+  background: transparent;
+}
+body {
+  webkit-tap-highlight-color: snow;
+}
+
+.actions {
+	  font-family: $font-family;
+  border: none;
+  border-radius: 0px;
+    color: snow;
+  background-color: $blue;
+}
+
+/* +++++++++++++++++   NAVBAR STUFF - NEEDS UPDATING
+
+ */
+
+
 .navbar-default {
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);
@@ -270,6 +404,8 @@ header .header-content .header-content-inner p {
   margin-bottom: 0;
 }
 
+/*++++++++++++++++ HOMEPAGE PORTFOLIO LINKS */
+
 .ghost-title {
   color: rgba(255, 255, 255, 0.7);
   /* opacity: 0.9; */
@@ -371,141 +507,7 @@ header .header-content .header-content-inner p {
   padding-right: 0;
   padding-left: 0;
 }
-.btn-default {
-  color: snow;
-  background-color: $blue;
-  border-color: $blue;
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
-}
-.btn-default:hover,
-.btn-default:focus,
-.btn-default.focus,
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-  color: snow;
-  background-color: $blue;
-  border-color: snow;
-}
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-  background-image: none;
-}
-.btn-default.disabled,
-.btn-default[disabled],
-fieldset[disabled] .btn-default,
-.btn-default.disabled:hover,
-.btn-default[disabled]:hover,
-fieldset[disabled] .btn-default:hover,
-.btn-default.disabled:focus,
-.btn-default[disabled]:focus,
-fieldset[disabled] .btn-default:focus,
-.btn-default.disabled.focus,
-.btn-default[disabled].focus,
-fieldset[disabled] .btn-default.focus,
-.btn-default.disabled:active,
-.btn-default[disabled]:active,
-fieldset[disabled] .btn-default:active,
-.btn-default.disabled.active,
-.btn-default[disabled].active,
-fieldset[disabled] .btn-default.active {
-  background-color: $blue;
-  border-color: white;
-}
-.btn-default .badge {
-  color: white;
-  background-color: $blue;
-}
-.btn-primary {
-  color: snow;
-  background-color: $blue;
-  border-color: $blue;
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
-}
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary.focus,
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
-  color: snow;
-  background-color: $blue;
-  border-color: #ed431f;
-}
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
-  background-image: none;
-}
-.btn-primary.disabled,
-.btn-primary[disabled],
-fieldset[disabled] .btn-primary,
-.btn-primary.disabled:hover,
-.btn-primary[disabled]:hover,
-fieldset[disabled] .btn-primary:hover,
-.btn-primary.disabled:focus,
-.btn-primary[disabled]:focus,
-fieldset[disabled] .btn-primary:focus,
-.btn-primary.disabled.focus,
-.btn-primary[disabled].focus,
-fieldset[disabled] .btn-primary.focus,
-.btn-primary.disabled:active,
-.btn-primary[disabled]:active,
-fieldset[disabled] .btn-primary:active,
-.btn-primary.disabled.active,
-.btn-primary[disabled].active,
-fieldset[disabled] .btn-primary.active {
-  background-color: $blue;
-  border-color: $blue;
-}
-.btn-primary .badge {
-  color: snow;
-  background-color: $blue;
-}
-.btn {
-  font-family: $font-family;
-  border: none;
-  border-radius: 0px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.btn-xl {
-  padding: 15px 30px;
-}
-::-moz-selection {
-  color: white;
-  text-shadow: none;
-  background: #222222;
-}
-::selection {
-  color: white;
-  text-shadow: none;
-  background: #222222;
-}
-img::selection {
-  color: white;
-  background: transparent;
-}
-img::-moz-selection {
-  color: white;
-  background: transparent;
-}
-body {
-  webkit-tap-highlight-color: snow;
-}
 
-.actions {
-	  font-family: $font-family;
-  border: none;
-  border-radius: 0px;
-    color: snow;
-  background-color: $blue;
-}
 
 
 /* +++
@@ -781,6 +783,10 @@ html { height: 100%;}
   width: 100%;
 }
 
+.hamburger.is-open .hamburger-label {
+	opacity: 0;
+}
+
 .hamburger.is-closed .hamb-top,
 .hamburger.is-closed .hamb-middle,
 .hamburger.is-closed .hamb-bottom, {
@@ -870,4 +876,73 @@ html { height: 100%;}
     background-color: rgba(250,250,250,.8);
     z-index: 1;
 }
+
+/* ++++++++++++ PROJECTS TILES */
+
+#tile .tile-item {
+  margin: 0 0 15px;
+  right: 0;
+}
+#tile .tile-item .tile-link {
+  display: block;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#tile .tile-item .tile-link .tile-hover {
+  background: rgba(254, 209, 54, 0.9);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+}
+#tile .tile-item .tile-link .tile-hover:hover {
+  opacity: 1;
+}
+#tile .tile-item .tile-link .tile-hover .tile-hover-content {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  top: 50%;
+  margin-top: -12px;
+  color: white;
+}
+#tile .tile-item .tile-link .tile-hover .tile-hover-content i {
+  margin-top: -12px;
+}
+#tile .tile-item .tile-link .tile-hover .tile-hover-content h3,
+#tile .tile-item .tile-link .tile-hover .tile-hover-content h4 {
+  margin: 0;
+}
+#tile .tile-item .tile-caption {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  text-align: center;
+  padding: 25px;
+}
+#tile .tile-item .tile-caption h4 {
+  text-transform: none;
+  margin: 0;
+}
+#tile .tile-item .tile-caption p {
+  font-family: $font-family;
+  font-style: italic;
+  font-size: 16px;
+  margin: 0;
+}
+#tile * {
+  z-index: 2;
+}
+@media (min-width: 767px) {
+  #tile .tile-item {
+    margin: 0 0 30px;
+  }
+}
+
 
