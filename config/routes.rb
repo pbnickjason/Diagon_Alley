@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   get "/workspace/:id" => "workspace#index", as: :workspace
     
   get "purchases/cart" => "purchases#cart"
-  get "/client_token" do
-    Braintree::ClientToken.generate
-  end
+  #get "/client_token" do
+  #  Braintree::ClientToken.generate
+  #end
     
   #get "*path", via: :all, to: "errors#not_found"
   match "/404", :to => "errors#not_found", :via => :all
