@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "projects/:id" => "projects#index"
   get "/workspace/:id" => "workspace#index", as: :workspace  
 
+    resources :standards
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
