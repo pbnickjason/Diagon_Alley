@@ -1,9 +1,10 @@
 <table>
     <% @Standards.each do |s| %>
         <tr>
-            <td><%= s.name %></td>
+            <td><%= s.path %></td>
             <td><%= s.description %></td>
-            <td><%= if s.parent_id then Standard.find(s.parent_id).name end%></td>
+            <td><%= s.id %></td>
+
         </tr>
     <% end %>
 </table>

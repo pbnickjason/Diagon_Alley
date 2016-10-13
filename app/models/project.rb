@@ -1,5 +1,7 @@
 class Project < ActiveRecord::Base
-  def self.search(search)
+    has_and_belongs_to_many :standards
+    
+    def self.search(search)
     where("title iLIKE ? OR summary iLIKE ?", "%#{search}%", "%#{search}%") 
     #where("summary LIKE ?", "%#{search}%")
   end
