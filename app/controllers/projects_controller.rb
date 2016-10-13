@@ -53,8 +53,7 @@ class ProjectsController < ApplicationController
       File.open(uploaded_io.path, 'rb') do |file|
         obj.put(body: file)
       end
-    
-    
+      
     @project = Project.new(project_params)
     @project.image = 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/' + objKey
     respond_to do |format|
@@ -104,7 +103,7 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:title, :description, :contents, :price, :summary, :instructions)
+      params.require(:project).permit(:title, :description, :contents, :price, :summary, :instructions, :standard_ids => [])
     end
     
     def not_found

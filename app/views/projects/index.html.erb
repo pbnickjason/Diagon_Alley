@@ -32,10 +32,6 @@ $(document).ready(function () {
       }
   }
   
-$("#checkAll").click(function () {
-    $(".check").prop('checked', $(this).prop('checked'));
-});
-
   
   $('[data-toggle="offcanvas"]').click(function () {
         $('#wrapper').toggleClass('toggled');
@@ -49,91 +45,21 @@ $("#checkAll").click(function () {
 </script>
 </head>
 <div id="wrapper">
-    
-<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
-            <ul class="nav sidebar-nav">
-                <li class="sidebar-brand">
-                       Project Explorer
-                </li>
-                <li>
-								<center>
-				<span style="font-size:24px;">
-				Subject(s)
-				<br><br>
-				</span>
-				</center>
-				<span>
-		<label for="default" class="btn btn-info" style="background: rgba(34,85,170, 0.8); width:100%;text-align:right;">Space & Physics <input type="checkbox" id="default" class="badgebox"><span class="badge">&check;</span></label>
-        <label for="primary" class="btn btn-info" style="background: rgba(235,56,18,0.8); width:100%;text-align:right;">Robotics & Comp. Science <input type="checkbox" id="primary" class="badgebox"><span class="badge">&check;</span></label>
-        <label for="info" class="btn btn-info" style="background: rgba(34,211,214, 0.8); width:100%;text-align:right;">Engineering & Design <input type="checkbox" id="info" class="badgebox"><span class="badge">&check;</span></label>
-        <label for="success" class="btn btn-info" style="background: rgba(237,140,28,0.8); width:100%;text-align:right;">Earth Science <input type="checkbox" id="success" class="badgebox"><span class="badge">&check;</span></label>
-        <label for="warning" class="btn btn-info" style="background: rgba(23,122,43, 0.8); width:100%;text-align:right;">Life Science <input type="checkbox" id="warning" class="badgebox"><span class="badge">&check;</span></label>
-        <label for="danger" class="btn btn-info" style="background: rgba(108,18,163, 0.8); width:100%;text-align:right;">Chemistry <input type="checkbox" id="danger" class="badgebox"><span class="badge">&check;</span></label>
-				</span>
-                
-				
-                </li>
-                <li>
-				<center>
-				<span style="font-size:24px;">
-				Grade Level
-				</span>
-				<br><br>
-				<span style="background:transparent;">
-				<%= text_field_tag "ex2", nil, type: 'text',class:'input-large',
-                 data: {'slider-id' => 'ex1Slider',
-                        'slider-min' => '0',
-                        'slider-max' => '12',
-                        'slider-step' => '1',
-                        'slider-value' => '[0,12]' }%>
-				</span>
-				</center>
-
-				</li>
-                <li>
-                    <a href="#">Select NGSS Standards</a>
-                </li>
-                <li>
-                    <a href="#">Duration Slider</a>
-                </li>
-
-                <li>
-                    <a href="#">Price Slider</a>
-                </li>
-                <li>
-                    <a href="#">Reusable Checkbox</a>
-                </li>
-                <li>
-                    <%= submit_tag "Search", :class => "btn btn-primary" ,:style => "width:100%;"%>
-                </li>
-<!-- 				 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li class="dropdown-header">Dropdown heading</li>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li -->
-            </ul>
-        </nav>
-        <div id="page-content-wrapper">
+	<%= render 'sidebar' %>
+<div id="page-content-wrapper">
             <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
                 <span class="hamb-top"></span>
     			<span class="hamb-middle"></span>
 				<span class="hamb-bottom"></span>
 				<span class="hamburger-label">Refine Search</span>
             </button>
-<div class=".container">
-        
+<div class="container">
     <div class="row">
         <%if defined?(@subject)%>
         <div class="col-sm-6 col-sm-offset-3">
             <h1 style="text-align: center"><%=@subject.name%></h1>
         </div>
-		
+
         <div class="col-sm-3">
             <%= form_tag(projects_path, :method => "get", id: "search-form") do %>
             <%= hidden_field_tag :subject, @subject.id %>
@@ -156,33 +82,34 @@ $("#checkAll").click(function () {
     </div>
 </div>
 
-    <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-        <% @projects.each do |project| %>
-        <div class="row">
-		<div class="col-sm-6 col-md-offset-3" style="border: 1px solid white; border-radius: 0px;">
-            
-                <div class="col-sm-4">
-                    <img src = <%= project.image %> style="width: 100%;max-width: 400px;margin:5px;">
+<!-- Tiles -->
+<section id="tile" class="bg-light-gray">
+        <div class="container">
+		<% @projects.each do |project| %>
+                <div class="col-md-4 col-sm-6 tile-item">
+                    <a href=<%= project_path(project) %> class="tile-link" data-toggle="modal">
+                        <div class="tile-hover">
+                            <div class="tile-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src= <%= project.image %> class="img-responsive" alt="">
+                    </a>
+                    <div class="tile-caption">
+                        <h4><%= "#{project.title}" %></h4>
+                        <p><%=project.summary%></p>
+						<p2>(tags)</p2>
+						<p3>$<%=project.price%></p3>
+                    </div>
                 </div>
-                <div class="col-sm-8">
-                    <h2 style="text-align: center"><%= link_to "#{project.title}", project, style: "color:snow;" %></h2> <br>
-                    <p><%=project.summary%></p>
-                    <h4 style="text-align: right">$<%=project.price%></h4>
-                    <!--<%= link_to 'Edit', edit_project_path(project) %>-->
-                    <!--<%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>-->
-                </div>
-            </div>
+				<% end %>
         </div>
-		<br>
-        <% end %>
-    </div>
-</div>
-</div>
-<br>
+    </section>
 <div class = "col-sm-12 col-md-offset-3">
 <%= button_to 'New Project', new_project_path, :class =>'btn btn-primary', :method => :get %> </div>
 </div>
 </div>
+
+
+
 <!-- <button type="button" class="btn btn-primary btn-lg btn-block"><%= link_to 'New Project', new_project_path %></button> -->
