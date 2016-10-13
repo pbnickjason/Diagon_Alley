@@ -16,28 +16,36 @@
 
 <body>
     <section class="Jumbotron" style="background-image: url('/img/portfolio/thumbnails/Saturn.jpg');margin-bottom:30px;">
-        <div class="container">
-            <div class="row">
-                <figure class="col-sm-6">
+        <div class="container" style="background:#1a1a1a; padding: 20px;">
+                <div class="col-sm-6 text-center">
+					<h1><%= @project.title %></h1>
                     <img src = <%= @project.image %> style="width: 100%;max-width: 400px;margin:20px;">
-                </figure>
-                <figure class="col-sm-6">
-                    <div class="row text-right">
-                        <h1><%= @project.title %></h1>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row text-center" style= "padding-top: 20px">
                         <h3><%= @project.summary %></h3>
                     </div>
-                </figure>
-            </div>
-        </div>
-    </section>
-    <section class="container">
-        <div class="row">
-            <figure class="col-sm-3" style="outline: 1px solid black;">
-                <div class="text-center">
-                    <h3>Price:</h3>
+					<div class = "col-sm-6" style="padding-top:80px">
+					STANDARDS AND TAGS And RATING
+					</div>
+					<div class = "col-sm-6 text-right" style="padding-top:20px">
+					 <h3> Materials (maybe order just some?)</h3>
+						 <ul style="list-style-position: inside;">
+						 <li>Thing 1 ($5)</li>
+						 <li> Thing 2 ($999,995.00)</li<
+						 </ul>
+						 <h3>Price:</h3>
                     <h4><%= @project.price %></h4>
 					<!-- Temporarily linking "Buy to Home" -->
                     <%= button_to 'Buy',root_path, :method => :get, :class => 'btn btn-primary' %>
+					</div>
+                </div>
+            </div>
+    </section>
+    <section class="container" style="background:#1a1a1a; padding: 50px;">
+            <figure class="col-sm-3" style="outline: 1px solid black;">
+                <div class="text-center">
+
                 </div>
             </figure>
             <figure class="col-sm-6">
@@ -52,4 +60,5 @@
             </figure>
         </div>
     </section>
+	</div>
 </body>
