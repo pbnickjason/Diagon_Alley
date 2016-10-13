@@ -24,7 +24,8 @@
       <ul class="nav navbar-nav pull-right">
           <li>
               <%=link_to purchases_cart_path, :class => 'portfolio-box' do %>
-                <span class="glyphicon glyphicon-shopping-cart"></span>
+              <i class="glyphicon glyphicon-shopping-cart icon-size"></i>
+              <span class="badge shoppingBadge shoppingBadge-custom">0</span>
               <% end %>
           </li>
         <% if user_signed_in? %>
@@ -61,3 +62,16 @@
     
 </html>
 
+<style>
+    .icon-size {
+        font-size:15px;
+    }
+    .shoppingBadge-custom{
+background: red;
+position:absolute;
+left:25px;
+top:20px;
+font-size:10px;
+
+ }
+</style>
