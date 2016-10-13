@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161009211008) do
+ActiveRecord::Schema.define(version: 20161013025724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,24 @@ ActiveRecord::Schema.define(version: 20161009211008) do
     t.string   "tags",         default: [],              array: true
     t.string   "image"
   end
+
+  create_table "projects_standards", id: false, force: :cascade do |t|
+    t.integer "project_id",  null: false
+    t.integer "standard_id", null: false
+  end
+
+  add_index "projects_standards", ["project_id", "standard_id"], name: "index_projects_standards_on_project_id_and_standard_id", using: :btree
+  add_index "projects_standards", ["standard_id", "project_id"], name: "index_projects_standards_on_standard_id_and_project_id", using: :btree
+
+  create_table "standards", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "parent_id"
+  end
+
+  add_index "standards", ["parent_id"], name: "index_standards_on_parent_id", using: :btree
 
   create_table "subjects", force: :cascade do |t|
     t.datetime "created_at", null: false
