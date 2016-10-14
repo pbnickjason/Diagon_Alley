@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20161014161234) do
     t.text     "summary"
     t.string   "tags",         default: [],              array: true
     t.string   "image"
+    t.integer  "user_id"
   end
 
   create_table "projects_standards", id: false, force: :cascade do |t|

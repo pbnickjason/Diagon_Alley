@@ -1,16 +1,29 @@
 Rails.application.routes.draw do
   resources :projects
   devise_for :users
-  get 'pages/index'
+  #get 'pages/index'
   
   root 'pages#index'
   get "pages/about" => "pages#about"
-    
+  
   get "projects/:id" => "projects#index"
-  get "/workspace/:id" => "workspace#index", as: :workspace  
+  get "/workspace/:id" => "workspace#index", as: :workspace
+  get "projects/added/:id" => "projects#added", as: :added
+  
+  get "/purchases/myCart" => "purchases#myCart"
+  get "/purchases/checkout" => "purchases#checkout"
+  post "/purchases/completed" => "purchases#completed"
+  get "purchases/added/:id" => "purchases#added"
+  
+  #get "*path", via: :all, to: "errors#not_found"
+  match "/404", :to => "errors#not_found", :via => :all
+  match "/422", :to => "errors#reject", :via => :all
+  match "/500", :to => "errors#unexpected", :via => :all
+  #get "*all", via: :all, to: "errors#unexpected"
 
     resources :standards
     resources :perf_exps
+    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

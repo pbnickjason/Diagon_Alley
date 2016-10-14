@@ -34,10 +34,15 @@
 						 <li>Thing 1 ($5)</li>
 						 <li> Thing 2 ($999,995.00)</li<
 						 </ul>
-						 <h3>Price:</h3>
+						 <!--<h3>Price:</h3>
                     <h4><%= @project.price %></h4>
-					<!-- Temporarily linking "Buy to Home" -->
-                    <%= button_to 'Buy',root_path, :method => :get, :class => 'btn btn-primary' %>
+					<% if user_signed_in? %>
+                    <% if current_user.projects.exists? @project %>
+                    <%= button_to 'Add to Cart', added_path(@project), :method => :get, :class => 'btn btn-primary', :disabled => true %>
+                    <% else %>
+                    <%= button_to 'Add to Cart', added_path(@project), :method => :get, :class => 'btn btn-primary' %>
+                    <% end %>
+                    <% end %>-->
 					</div>
                 </div>
             </div>
@@ -45,7 +50,15 @@
     <section class="container" style="background:#1a1a1a; padding: 50px;">
             <figure class="col-sm-3" style="outline: 1px solid black;">
                 <div class="text-center">
-
+                    <h3>Price:</h3>
+                    <h4><%= @project.price %></h4>
+					<% if user_signed_in? %>
+                    <% if current_user.projects.exists? @project %>
+                    <%= button_to 'Add to Cart', added_path(@project), :method => :get, :class => 'btn btn-primary', :disabled => true %>
+                    <% else %>
+                    <%= button_to 'Add to Cart', added_path(@project), :method => :get, :class => 'btn btn-primary' %>
+                    <% end %>
+                    <% end %>
                 </div>
             </figure>
             <figure class="col-sm-6">

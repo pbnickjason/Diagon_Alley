@@ -55,6 +55,7 @@ gem 'pg'
 gem 'bootstrap-slider-rails'  
     
 gem 'aws-sdk'
+gem "braintree", "~> 2.67.0"
 
 end
 
