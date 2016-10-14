@@ -133,6 +133,20 @@ Standard.create(
     }
 )
 
+PerfExp.create(
+    name: "K-PS2-1",
+    description: "Plan and conduct an investigation to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object.",
+    grade_level: "K",
+    standard_ids: ["5","13","26","27","32"]
+)
+
+PerfExp.create(
+    name: "K-PS2-2",
+    description: "Analyze data to determine if a design solution works as intended to change the speed or direction of an object with a push or a pull.*",
+    grade_level: "K",
+    standard_ids: ["6","13","26","75"]
+)
+
 Project.create(
     title: 'Slayer Exciter Circuit', 
     
