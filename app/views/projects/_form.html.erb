@@ -54,6 +54,8 @@
 
 <br>
 
-<%= f.collection_check_boxes(:standard_ids, Standard.all, :id, :path) %>
+<%= f.collection_check_boxes(:standard_ids, Standard.all, :id, :path) do |b| %>
+<%= b.label {b.check_box + b.text} %><br>
+<% end %>
 
 <% end %>
