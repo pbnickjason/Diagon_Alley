@@ -22,6 +22,116 @@ Subject.create(name: 'Earth Science', image: 'https://s3-us-west-2.amazonaws.com
 Subject.create(name: 'Life Science', image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/subject_images/Turtle.jpg',color: 'rgba(23,122,43, 0.8)')
 Subject.create(name: 'Chemistry', image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/subject_images/Luminol.jpg',color: 'rgba(108,18,163, 0.8)')
 
+Standard.create(
+    name: 'NGSS', description: 'Next Generation Science Standards', :children_attributes => { 
+        1 => { name: "SEP", description: "Scientific and Engineering Practices", :children_attributes => {  
+            1 => { name: "1", description: "Asking questions and defining problems" },
+            2 => { name: "2", description: "Developing and using models" },
+            3 => { name: "3", description: "Planning and carrying out investigations"},
+            4 => { name: "4", description: "Analyzing and interpreting data"},
+            5 => { name: "5", description: "Using mathematics and computational thinking"},
+            6 => { name: "6", description: "Constructing explanations"},
+            7 => { name: "7", description: "Engaging in argument from evidence"},
+            8 => { name: "8", description: "Obtaining, evaluating, and communicating information"}
+        }},
+        
+        2 => { name: "CC", description: "Crosscutting Concepts", :children_attributes => { 
+            1 => { name: "1", description: "Patterns"},
+            2 => { name: "2", description: "Cause and effect: Mechanism and explanation"},
+            3 => { name: "3", description: "Scale, proportion, and quantity"},
+            4 => { name: "4", description: "Systems and system models"},
+            5 => { name: "5", description: "Energy and matter: Flows, cycles, and conservation"},
+            6 => { name: "6", description: "Structure and function"},
+            7 => { name: "7", description: "Stability and change"}
+        }},
+        
+        3 => { name: "DCI", description: "Disciplinary Core Ideas", :children_attributes => { 
+            1 => { name: "PS", description: "Physical Sciences", :children_attributes => { 
+                1 => { name: "1", description: "Matter and Its Interactions", :children_attributes => { 
+                    1 => { name: "A", description: "Structure and Properties of Matter"},
+                    2 => { name: "B", description: "Chemical Reactions"},
+                    3 => { name: "C", description: "Nuclear Processes"}
+                }},
+                2 => { name: "2", description: "Motion and Stability: Force and Interactions", :children_attributes => {
+                    1 => { name: "A", description: "Forces and Motion"},
+                    2 => { name: "B", description: "Types of Interactions"},
+                    3 => { name: "C", description: "Stability and Instability in Physical Systems"}
+                }},
+                3 => { name: "3", description: "Energy", :children_attributes => {
+                    1 => { name: "A", description: "Definitions of Energy"},
+                    2 => { name: "B", description: "Conservation of Energy and Energy Transfer"},
+                    3 => { name: "C", description: "Relationships Between Energy and Forces"},
+                    4 => { name: "D", description: "Energy in Chemical Processes and Everyday Life"}
+                }},
+                4 => { name: "4", description: "Waves and Their Applications in Technologies for Information Transfer", :children_attributes => {
+                    1 => { name: "A", description: "Wave Properties"},
+                    2 => { name: "B", description: "Electromagnetic Radiation"},
+                    3 => { name: "C", description: "Information Technologies and Instrumentation"}
+                }}
+            }},
+            
+            2 => { name: "LS", description: "Life Sciences", :children_attributes => {
+                1 => { name: "1", description: "From Molecules to Organisms: Structures and Processes", :children_attributes => {
+                    1 => { name: "A", description: "Structure and Function"},
+                    2 => { name: "B", description: "Growth and Development of Organisms"},
+                    3 => { name: "C", description: "Organization for Matter and Energy Flow in Organisms"},
+                    4 => { name: "D", description: "Information Processing"}
+                }},
+                2 => { name: "2", description: "Ecosystems: Interactions, Energy, and Dynamics", :children_attributes => {
+                    1 => { name: "A", description: "Interdependent Relationships in Ecosystems"},
+                    2 => { name: "B", description: "Cycles of Matter and Energy Transfer in Ecosystems"},
+                    3 => { name: "C", description: "Ecosystem Dynamics, Functioning, and Resilience"},
+                    4 => { name: "D", description: "Social Interactions and Group Behavior"}
+                }},
+                3 => { name: "3", description: "Heredity: Inheritance and Variation of Traits", :children_attributes => {
+                    1 => { name: "A", description: "Inheritance of Traits"},
+                    2 => { name: "B", description: "Variation of Traits"}
+                }},
+                4 => { name: "4", description: "Biological Evolution: Unity and Diversty", :children_attributes => {
+                    1 => { name: "A", description: "Evidence of Common Ancestry and Diversity"},
+                    2 => { name: "B", description: "Natural Selection"},
+                    3 => { name: "C", description: "Adaptation"},
+                    4 => { name: "D", description: "Biodiversity and Humans"}
+                }}  
+            }},
+            
+            3 => { name: "ESS", description: "Earth and Space Sciences", :children_attributes => {
+                1 => { name: "1", description: "Earth's Place in the Universe", :children_attributes => {
+                    1 => { name: "A", description: "The Universe and Its Stars"},
+                    2 => { name: "B", description: "Earth and the Solar System"},
+                    3 => { name: "C", description: "The History of Planet Earth"}
+                }},
+                2 => { name: "2", description: "Earth's Systems", :children_attributes => {
+                    1 => { name: "A", description: "Earth Materials and Systems"},
+                    2 => { name: "B", description: "Plate Tectonics and Large-Scale System Interactions"},
+                    3 => { name: "C", description: "The Roles of Water in Earth's Surface Processes"},
+                    4 => { name: "D", description: "Weather and Climate"},
+                    5 => { name: "E", description: "Biogeology"}
+                }},
+                3 => { name: "3", description: "Earth and Human Activity", :children_attributes => {
+                    1 => { name: "A", description: "Natural Resources"},
+                    2 => { name: "B", description: "Natural Hazards"},
+                    3 => { name: "C", description: "Human Impacts on Earth Systems"},
+                    4 => { name: "D", description: "Global Climate Change"}
+                }}
+            }},
+            
+            4 => { name: "ETS", description: "Engineering, Technology, and Applications of Science", :children_attributes => {
+                1 => { name: "1", description: "Engineering Design", :children_attributes => {
+                    1 => { name: "A", description: "Defining and Delimiting an Engineering Problem"},
+                    2 => { name: "B", description: "Developing Possible Solutions"},
+                    3 => { name: "C", description: "Optimizing the Design Solution"}
+                }},
+                2 => { name: "2", description: "Links Among Engineering, Technology, Science, and Society", :children_attributes => {
+                    1 => { name: "A", description: "Interdependence of Science, Engineering, and Technology"},
+                    2 => { name: "B", description: "Influence of Engineering, Technology, and Science on Society and the Natural World"}
+                }}
+            }}
+            
+        }}
+        
+    }
+)
 
 Project.create(
     title: 'Slayer Exciter Circuit', 
@@ -38,7 +148,9 @@ Project.create(
     
     tags: ['Engineering & Design'],
     
-    image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
+    image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg',
+    
+    standard_ids: ["4", "8", "18", "31"]
     )
 
 Project.create(
@@ -149,113 +261,3 @@ Project.create(
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
 
-Standard.create(
-    name: 'NGSS', description: 'Next Generation Science Standards', :children_attributes => { 
-        1 => { name: "SEP", description: "Scientific and Engineering Practices", :children_attributes => {  
-            1 => { name: "1", description: "Asking questions and defining problems" },
-            2 => { name: "2", description: "Developing and using models" },
-            3 => { name: "3", description: "Planning and carrying out investigtions"},
-            4 => { name: "4", description: "Analyzing and interpreting data"},
-            5 => { name: "5", description: "Using mathematics and computational thinking"},
-            6 => { name: "6", description: "Constructing explanations"},
-            7 => { name: "7", description: "Engaging in argument from evidence"},
-            8 => { name: "8", description: "Obtaining, evaluating, and communicating information"}
-        }},
-        
-        2 => { name: "CC", description: "Crosscutting Concepts", :children_attributes => { 
-            1 => { name: "1", description: "Patterns"},
-            2 => { name: "2", description: "Cause and effect: Mechanism and explanation"},
-            3 => { name: "3", description: "Scale, proportion, and quantity"},
-            4 => { name: "4", description: "Systems and system models"},
-            5 => { name: "5", description: "Energy and matter: Flows, cycles, and conservation"},
-            6 => { name: "6", description: "Structure and function"},
-            7 => { name: "7", description: "Stability and change"}
-        }},
-        
-        3 => { name: "DCI", description: "Disciplinary Core Ideas", :children_attributes => { 
-            1 => { name: "PS", description: "Physical Sciences", :children_attributes => { 
-                1 => { name: "1", description: "Matter and Its Interactions", :children_attributes => { 
-                    1 => { name: "A", description: "Structure and Properties of Matter"},
-                    2 => { name: "B", description: "Chemical Reactions"},
-                    3 => { name: "C", description: "Nuclear Processes"}
-                }},
-                2 => { name: "2", description: "Motion and Stability: Force and Interactions", :children_attributes => {
-                    1 => { name: "A", description: "Forces and Motion"},
-                    2 => { name: "B", description: "Types of Interactions"},
-                    3 => { name: "C", description: "Stability and Instability in Physical Systems"}
-                }},
-                3 => { name: "3", description: "Energy", :children_attributes => {
-                    1 => { name: "A", description: "Definitions of Energy"},
-                    2 => { name: "B", description: "Conservation of Energy and Energy Transfer"},
-                    3 => { name: "C", description: "Relationships Between Energy and Forces"},
-                    4 => { name: "D", description: "Energy in Chemical Processes and Everyday Life"}
-                }},
-                4 => { name: "4", description: "Waves and Their Applications in Technologies for Information Transfer", :children_attributes => {
-                    1 => { name: "A", description: "Wave Properties"},
-                    2 => { name: "B", description: "Electromagnetic Radiation"},
-                    3 => { name: "C", description: "Information Technologies and Instrumentation"}
-                }}
-            }},
-            
-            2 => { name: "LS", description: "Life Sciences", :children_attributes => {
-                1 => { name: "1", description: "From Molecules to Organisms: Structures and Processes", :children_attributes => {
-                    1 => { name: "A", description: "Structure and Function"},
-                    2 => { name: "B", description: "Growth and Development of Organisms"},
-                    3 => { name: "C", description: "Organization for Matter and Energy Flow in Organisms"},
-                    4 => { name: "D", description: "Information Processing"}
-                }},
-                2 => { name: "2", description: "Ecosystems: Interactions, Energy, and Dynamics", :children_attributes => {
-                    1 => { name: "A", description: "Interdependent Relationships in Ecosystems"},
-                    2 => { name: "B", description: "Cycles of Matter and Energy Transfer in Ecosystems"},
-                    3 => { name: "C", description: "Ecosystem Dynamics, Functioning, and Resilience"},
-                    4 => { name: "D", description: "Social Interactions and Group Behavior"}
-                }},
-                3 => { name: "3", description: "Heredity: Inheritance and Variation of Traits", :children_attributes => {
-                    1 => { name: "A", description: "Inheritance of Traits"},
-                    2 => { name: "B", description: "Variation of Traits"}
-                }},
-                4 => { name: "4", description: "Biological Evolution: Unity and Diversty", :children_attributes => {
-                    1 => { name: "A", description: "Evidence of Common Ancestry and Diversity"},
-                    2 => { name: "B", description: "Natural Selection"},
-                    3 => { name: "C", description: "Adaptation"},
-                    4 => { name: "D", description: "Biodiversity and Humans"}
-                }}  
-            }},
-            
-            3 => { name: "ESS", description: "Earth and Space Sciences", :children_attributes => {
-                1 => { name: "1", description: "Earth's Place in the Universe", :children_attributes => {
-                    1 => { name: "A", description: "The Universe and Its Stars"},
-                    2 => { name: "B", description: "Earth and the Solar System"},
-                    3 => { name: "C", description: "The History of Planet Earth"}
-                }},
-                2 => { name: "2", description: "Earth's Systems", :children_attributes => {
-                    1 => { name: "A", description: "Earth Materials and Systems"},
-                    2 => { name: "B", description: "Plate Tectonics and Large-Scale System Interactions"},
-                    3 => { name: "C", description: "The Roles of Water in Earth's Surface Processes"},
-                    4 => { name: "D", description: "Weather and Climate"},
-                    5 => { name: "E", description: "Biogeology"}
-                }},
-                3 => { name: "3", description: "Earth and Human Activity", :children_attributes => {
-                    1 => { name: "A", description: "Natural Resources"},
-                    2 => { name: "B", description: "Natural Hazards"},
-                    3 => { name: "C", description: "Human Impacts on Earth Systems"},
-                    4 => { name: "D", description: "Global Climate Change"}
-                }}
-            }},
-            
-            4 => { name: "ETS", description: "Engineering, Technology, and Applications of Science", :children_attributes => {
-                1 => { name: "1", description: "Engineering Design", :children_attributes => {
-                    1 => { name: "A", description: "Defining and Delimiting an Engineering Problem"},
-                    2 => { name: "B", description: "Developing Possible Solutions"},
-                    3 => { name: "C", description: "Optimizing the Design Solution"}
-                }},
-                2 => { name: "2", description: "Links Among Engineering, Technology, Science, and Society", :children_attributes => {
-                    1 => { name: "A", description: "Interdependence of Science, Engineering, and Technology"},
-                    2 => { name: "B", description: "Influence of Engineering, Technology, and Science on Society and the Natural World"}
-                }}
-            }}
-            
-        }}
-        
-    }
-)
