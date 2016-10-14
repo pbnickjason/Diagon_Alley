@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   get "/workspace/:id" => "workspace#index", as: :workspace
   get "projects/added/:id" => "projects#added", as: :added
   
-  get "purchases/myCart" => "purchases#myCart"
-  get "purchases/checkout" => "purchases#checkout"# do
+  get "/purchases/myCart" => "purchases#myCart"
+  get "/purchases/checkout" => "purchases#checkout"
   post "/purchases/completed" => "purchases#completed"
   get "purchases/added/:id" => "purchases#added"
   

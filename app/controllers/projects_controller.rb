@@ -17,12 +17,11 @@ class ProjectsController < ApplicationController
             end 
         end
     rescue ActiveRecord::RecordNotFound
-        if params[:subject].nil?
+        #if params[:subject].nil?
             @projects = all_projects
-        else
-            not_found
-        end
-        #@projects = all_projects #if subject isn't found somehow, or if 'projects' is clicked
+        #else
+        #    not_found
+        #end
     end
   end
 
