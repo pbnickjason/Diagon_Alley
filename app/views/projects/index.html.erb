@@ -11,7 +11,7 @@
 $(document).ready(function () {
   var trigger = $('.hamburger'),
       overlay = $('.overlay'),
-     isClosed = false;
+     isClosed = true;
 
     trigger.click(function () {
       hamburger_cross();      
@@ -31,35 +31,27 @@ $(document).ready(function () {
         isClosed = true;
       }
   }
-  
-  
+
   $('[data-toggle="offcanvas"]').click(function () {
         $('#wrapper').toggleClass('toggled');
   });  
-  $(document).ready(function(e){
-    		$(".img-check").click(function(){
-				$(this).toggleClass("check");
-			});
-	});
 });
 </script>
 </head>
-<div id="wrapper">
+<div id="wrapper" class ="toggled">
 	<%= render 'sidebar' %>
 <div id="page-content-wrapper">
-            <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+            <button type="button" class="hamburger is-open" data-toggle="offcanvas">
                 <span class="hamb-top"></span>
     			<span class="hamb-middle"></span>
 				<span class="hamb-bottom"></span>
 				<span class="hamburger-label">Refine Search</span>
             </button>
-<div class="container">
-    <div class="row">
+
         <%if defined?(@subject)%>
         <div class="col-sm-6 col-sm-offset-3">
             <h1 style="text-align: center"><%=@subject.name%></h1>
         </div>
-
         <div class="col-sm-3">
             <%= form_tag(projects_path, :method => "get", id: "search-form") do %>
             <%= hidden_field_tag :subject, @subject.id %>
@@ -76,11 +68,10 @@ $(document).ready(function () {
               <%= text_field_tag :search, params[:search], placeholder: "Search Projects", :style => "color: black" %>
               <%= submit_tag "Search", :class => "btn btn-primary" %>
             <% end %>
-            
         </div>
         <% end %>
-    </div>
-</div>
+
+
 
 <!-- Tiles -->
 <section id="tile" class="bg-light-gray">
@@ -94,21 +85,25 @@ $(document).ready(function () {
                             </div>
                         </div>
                         <img src= <%= project.image %> class="img-responsive" alt="">
-                    </a>
+
                     <div class="tile-caption">
-                        <h4><%= "#{project.title}" %></h4>
+                        <h4><%= project.title %></h4>
+						</a>
                         <p><%=project.summary%></p>
 						<p2>(tags)</p2>
 						<p3>$<%=project.price%></p3>
                     </div>
+
                 </div>
+				
 				<% end %>
         </div>
-    </section>
 <div class = "col-sm-12 col-md-offset-3">
 <%= button_to 'New Project', new_project_path, :class =>'btn btn-primary', :method => :get %> </div>
 </div>
+</section>
 </div>
+
 
 
 

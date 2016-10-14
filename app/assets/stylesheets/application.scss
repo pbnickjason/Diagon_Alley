@@ -836,7 +836,12 @@ html { height: 100%;}
   -webkit-transform: rotate(45deg);
   -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
 }
-.hamburger.is-open .hamb-middle { display: none; }
+.hamburger.is-open .hamb-middle { 
+background-color: transparent;
+z-index:-1;
+height: 24px;
+-webkit-transform: translate3d(0,-12px,0);
+ }
 .hamburger.is-open .hamb-bottom {
   -webkit-transform: rotate(-45deg);
   -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
@@ -962,6 +967,7 @@ html { height: 100%;}
   right: 6%;
   bottom: 2%;
 }
+
 
 #tile * {
   z-index: 2;
