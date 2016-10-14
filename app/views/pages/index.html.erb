@@ -1,52 +1,87 @@
+<!-- Feel free to change literally anything here to work better with the CSS and formatting on the rest of the site-->
+<!-- especially the lowest level div tag, that one's really just for me -->
+<!-- I have attempted to make everything as easy to stylistically modify as possible -->
+<!-- Testing was done on the following resolutions: 2560x1440, 1920x1080, 1366x768, 360x640-->
 
+<div style="text-align:center">
 
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-
-
-</head>
-
-<!--   <div class="jumbotron">
-    <div class="container">
-      <h1>Welcome!</h1>
-      <p>Register to get started.</p>
-      <p>
-        <%= link_to 'Register', new_user_registration_path, class: 'btn btn-primary btn-lg' %>
-      </p>
+    <div class="jumbotron">
+        <div class="container">
+          <h1>Empowering Project-Based-Learning <small><br>K-12 STEM Project Kits for Teachers</small></h1>
+        </div>
     </div>
-  </div>
--->
 
-<body id="page-top">
+    <div class="container">
+       <div class="row">
+            <div class="col-md-6">
+                <h2><strong>What's a kit?</strong></h2>
+                <h3>Highly affordable<br><small>$1-10 per student per kit</small></h3>
+                <h3>Standards-integrated<br><small>NGSS, Common Core, and ISTE</small></h3>
+                <h3>Completely pre-packaged<br><small>Lesson plans and materials: everything you need!</small></h3>
+            </div>
+           <div class="col-md-1"></div> 
+           <div class="col-md-4">
+                <h2><strong>Submit a project!</strong></h2>
+                <h3>You know that INCREDIBLE activity you created to teach that thing you love? 
+                    Submit it to the platform and get paid a cut of sales.<br>
+                    <small>Subject to a painless submission process, of course.</small>
+                    <br> Coming soon!
+                </h3>
+            <div class="col-md-1"></div>    
+            </div>
+
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Get Explorious <small><br>Pick a subject below! </small></h1>
+        </div>
+    </div>
 
     <section class="no-padding" id="portfolio">
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
                 <% @subjects.each do |subject| %>
-                <div class="col-lg-4 col-sm-6">
-                    <%=link_to projects_path(:subject => subject.id), :class => 'portfolio-box' do %>
-                        <img src=<%=subject.image%> class="img-responsive" alt="">
-						<div class="ghost-title" style = "background: <%= subject.color %>;"> <%= subject.name %> </div>
-						<div class="portfolio-box-caption" style = "background: <%= subject.color %>"> 
-						<div class="portfolio-box-caption-content" >
-                                <div class="project-category text-faded">
-                                    <%=subject.name%>
-                                </div>
-                                <div class="project-name">
-                                    Explore Curriculum-Integrated Projects
+                    <div class="col-lg-4 col-sm-6">
+                        <%=link_to projects_path(:subject => subject.id), :class => 'portfolio-box' do %>
+                            <img src=<%=subject.image%> class="img-responsive" alt="">
+                            <div class="ghost-title" style = "background: <%= subject.color %>;"> 
+                                <%= subject.name %> 
+                            </div>
+                            <div class="portfolio-box-caption" style = "background: <%= subject.color %>"> 
+                                <div class="portfolio-box-caption-content" >
+                                    <div class="project-category text-faded">
+                                        <%=subject.name%>
+                                    </div>
+                                    <div class="project-name">
+                                        Explore Curriculum-Integrated Projects
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <% end %>
-                </div>
+                        <% end %>
+                    </div>
                 <% end %>
             </div>
         </div>
     </section>
 
+    <div class="jumbotron">
+        <div class="container">
+            <h1>How about us? <small><br>Here's why we do this</small></h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div clas="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <h3>We believe we can broadly increase the quality and equity of high quality STEM education by empowering teachers to spend less time and money preparing projects. We're very much a work in progress and we would love to hear from you!</h3>
+                
+                (Render form)
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+
+</div>
