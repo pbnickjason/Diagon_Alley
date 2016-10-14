@@ -1,7 +1,7 @@
 class PurchasesController < ApplicationController
     protect_from_forgery with: :null_session
-    
-    def cart
+        
+    def myCart
     end
     
     def checkout

@@ -8,15 +8,12 @@ Rails.application.routes.draw do
   
   get "projects/:id" => "projects#index"
   get "/workspace/:id" => "workspace#index", as: :workspace
-    
-  get "purchases/cart" => "purchases#cart"
+  get "projects/added/:id" => "projects#added", as: :added
+  
+  get "purchases/myCart" => "purchases#myCart"
   get "purchases/checkout" => "purchases#checkout"# do
-  #    Braintree::ClientToken.generate
-  #end
   post "/purchases/completed" => "purchases#completed"
-  #get "/client_token" do
-  #  Braintree::ClientToken.generate
-  #end
+  get "purchases/added/:id" => "purchases#added"
   
   #get "*path", via: :all, to: "errors#not_found"
   match "/404", :to => "errors#not_found", :via => :all

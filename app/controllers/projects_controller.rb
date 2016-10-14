@@ -30,6 +30,13 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
   end
+    
+  #def show(add_to_cart)
+  #        if(add_to_cart)
+  #            project = Project.find(params(:project))
+  #            @cart.shopping_cart << project.title
+  #        end
+  #end
 
   # GET /projects/new
   def new
@@ -90,6 +97,14 @@ class ProjectsController < ApplicationController
       # format.json { head :no_content }
     end
   end
+    
+  def added
+    @project = Project.find(params[:id])
+    if user_signed_in?
+      current_user.projects << @project
+    end
+    #Rails.application.routes.url_helpers.project_path(:project)
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -97,10 +112,10 @@ class ProjectsController < ApplicationController
         begin
             @project = Project.find(params[:id])
         rescue ActiveRecord::RecordNotFound
-            handle_400
+            not_found
         end
     end
-
+    
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params.require(:project).permit(:title, :description, :contents, :price, :summary, :instructions, :standard_ids => [])
