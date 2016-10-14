@@ -1,0 +1,12 @@
+<table>
+    <% @PerfExps.each do |pe| %>
+        <tr>
+            <td><%= pe.name %></td>
+            <td><%= pe.grade_level %></td>
+            <td><%= pe.description %></td>
+            <% pe.standards.each do |s| %>
+            <td><%= s.path + ": " + s.description %></td>
+            <% end %>
+        </tr>
+    <% end %>
+</table>
