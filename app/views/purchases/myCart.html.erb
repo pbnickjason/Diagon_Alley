@@ -5,3 +5,35 @@
         </div>
     </div>
 </div>
+
+<% if user_signed_in? %>
+<!-- Tiles -->
+<section id="tile" class="bg-light-gray">
+        <div class="container">
+		<% current_user.projects.each do |project| %>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 tile-item">
+                    <a href=<%= project_path(project) %> class="tile-link" data-toggle="modal">
+                        <div class="tile-hover">
+                            <div class="tile-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src= <%= project.image %> class="img-responsive" alt="">
+                    </a>
+                    <div class="tile-caption">
+                        <h4><%= "#{project.title}" %></h4>
+                        <p><%=project.summary%></p>
+						<p2>(tags)</p2>
+						<p3>$<%=project.price%></p3>
+                    </div>
+                </div>
+                <div class = "col-md-4 col-md-offset-1">
+                    
+                    <input type="text" style="margin-top:35%">
+                </div>
+            </div>
+				<% end %>
+        </div>
+    </section>
+<% end %>
