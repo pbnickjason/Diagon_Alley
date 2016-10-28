@@ -1,10 +1,20 @@
-<table>
-    <% @Standards.each do |s| %>
+<div class="table-responsive">
+    <table class="table">
         <tr>
-            <td><%= s.path %></td>
-            <td><%= s.id %></td>
-            <td><%= s.description %></td>
-            <td><%= s.project_ids %></td>
+            <th>path</th>
+            <th>id</th>
+            <th>description</th>
+            <th>project_ids</th>
+            <th>perf_exp_ids</th>
         </tr>
-    <% end %>
-</table>
+        <% @Standards.each do |s| %>
+            <tr>
+                <td><%= s.path %></td>
+                <td><%= s.id %></td>
+                <td><%= s.description %></td>
+                <td><%= s.project_ids %></td>
+                <td><%= s.perf_exp_ids %></td>
+            </tr>
+        <% end %>
+    </table>
+</div>

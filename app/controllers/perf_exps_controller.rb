@@ -19,7 +19,7 @@ class PerfExpsController < ApplicationController
     
     private
     def perf_exp_params
-        params.require(:perf_exp).permit(:name, :description, :grade_level, :standard_ids => [])
+        params.require(:perf_exp).permit(:name, :description, :grade_level => [], :standard_ids => [])
     end
 
 end

@@ -1,12 +1,26 @@
-<table>
-    <% @PerfExps.each do |pe| %>
+<div class="table-responsive">
+    <table class="table">
         <tr>
-            <td><%= pe.name %></td>
-            <td><%= pe.grade_level %></td>
-            <td><%= pe.description %></td>
-            <% pe.standards.each do |s| %>
-            <td><%= s.path + ": " + s.description %></td>
-            <% end %>
+            <th>code</th>
+            <th>name</th>
+            <th>grade_level</th>
+            <th>id</th>
+            <th>description</th>
+            <th>standard.path: standard.description</th>
         </tr>
-    <% end %>
-</table>
+        <% @PerfExps.each do |pe| %>
+            <tr>
+                <td><%= pe.code %></td>
+                <td><%= pe.name %></td>
+                <td><%= pe.grade_level*", " %></td>
+                <td><%= pe.id %></td>
+                <td><%= pe.description %></td>
+                <td>
+                    <% pe.standards.each do |s| %>
+                    <%= s.path + ": " + s.description %><br>
+                    <% end %>
+                </td>
+            </tr>
+        <% end %>
+    </table>
+</div>
