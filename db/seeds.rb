@@ -1628,8 +1628,7 @@ PerfExp.create(
             description: "Use a computer simulation to model the impact of proposed solutions to a complex real-world problem with numerous criteria and constraints on interactions within and between systems relevant to the problem.",
             grade_level: ["HS"],
             standard_ids: ["7","76","15"] 
-        },
-        
+        }
         
     ]
     
