@@ -1,23 +1,28 @@
+
+<%= @PerfExps.collect(&:name).uniq %><br>
+<%= @PerfExps.collect(&:grade_level).flatten.uniq %>
+   
+
 <div class="table-responsive">
     <table class="table">
         <tr>
             <th>code</th>
             <th>name</th>
+            <th>descriptiondescriptiondescriptiondescription</th>
             <th>grade_level</th>
             <th>id</th>
-            <th>description</th>
-            <th>standard.path: standard.description</th>
+            <th>standard.id standard.path: standard.description</th>
         </tr>
         <% @PerfExps.each do |pe| %>
             <tr>
-                <td><%= pe.code %></td>
-                <td><%= pe.name %></td>
+                <td class="text-nowrap"><%= pe.code %></td>
+                <td class="text-nowrap"><%= pe.name %></td>
+                <td><%= pe.description %></td>
                 <td><%= pe.grade_level*", " %></td>
                 <td><%= pe.id %></td>
-                <td><%= pe.description %></td>
-                <td>
+                <td class="text-nowrap">
                     <% pe.standards.each do |s| %>
-                    <%= s.path + ": " + s.description %><br>
+                    <%= s.id.to_s + " " + s.path + ": " + s.description %><br>
                     <% end %>
                 </td>
             </tr>

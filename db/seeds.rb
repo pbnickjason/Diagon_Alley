@@ -712,42 +712,42 @@ PerfExp.create(
 #        Middle School
         
         {   code: "MS-PS1-1",
-            name: "Matter and its Interactions",
+            name: "Matter and Its Interactions",
             description: "Develop models to describe the atomic composition of simple molecules and extended structures.",
             grade_level: ["MS"],
             standard_ids: ["4","22","14"] 
         },
         
         {   code: "MS-PS1-2",
-            name: "Matter and its Interactions",
+            name: "Matter and Its Interactions",
             description: "Analyze and interpret data on the properties of substances before and after the substances interact to determine if a chemical reaction has occured.",
             grade_level: ["MS"],
             standard_ids: ["6","22","23","12"] 
         },
         
         {   code: "MS-PS1-3",
-            name: "Matter and its Interactions",
+            name: "Matter and Its Interactions",
             description: "Gather and make sense of information to describe that synthetic materials come from natural resources and impact society.",
             grade_level: ["MS"],
             standard_ids: ["10","22","23","17"] 
         },
         
         {   code: "MS-PS1-4",
-            name: "Matter and its Interactions",
+            name: "Matter and Its Interactions",
             description: "Develop a model that predicts and describes in particle motion, temperature, and state of a pure substance when thermal energy is added or removed.",
             grade_level: ["MS"],
             standard_ids: ["4","22","30","13"] 
         },
         
         {   code: "MS-PS1-5",
-            name: "Matter and its Interactions",
+            name: "Matter and Its Interactions",
             description: "Develop and use a model to describe how the total number of atoms does not change in a chemical reaction and thus mass is conserved.",
             grade_level: ["MS"],
             standard_ids: ["4","23","16"] 
         },
         
         {   code: "MS-PS1-6",
-            name: "Matter and its Interactions",
+            name: "Matter and Its Interactions",
             description: "Undertake a design project to construct, test, and modify a device that either releases or absorbs thermal energy by chemical processes.*",
             grade_level: ["MS"],
             standard_ids: ["8","23","76","77","16"] 
@@ -824,21 +824,21 @@ PerfExp.create(
         },
         
         {   code: "MS-PS4-1",
-            name: "Waves and their Applications in Technologies for Information Transfer",
+            name: "Waves and Their Applications in Technologies for Information Transfer",
             description: "use mathematical representation to describe a simple model for waves that includes how the amplitude of a wave is related to the energy in a wave.",
             grade_level: ["MS"],
             standard_ids: ["7","35","12"] 
         },
         
         {   code: "MS-PS4-2",
-            name: "Waves and their Applications in Technologies for Information Transfer",
+            name: "Waves and Their Applications in Technologies for Information Transfer",
             description: "Develop and use a model to describe that waves are reflected, absorbed, or transmitted through various materials.",
             grade_level: ["MS"],
             standard_ids: ["4","35","36","17"] 
         },
         
         {   code: "MS-PS4-3",
-            name: "Waves and their Applications in Technologies for Information Transfer",
+            name: "Waves and Their Applications in Technologies for Information Transfer",
             description: "Integrate qualitative scientific and technical information to support the claim that digitized signals are a more reliable way to encode and transmit information than analog signals.",
             grade_level: ["MS"],
             standard_ids: ["10","37","17"] 
@@ -1127,56 +1127,56 @@ PerfExp.create(
 #        High School
         
         {   code: "HS-PS1-1",
-            name: "Matter and its Interactions",
+            name: "Matter and Its Interactions",
             description: "Use the periodic table as a model to predict the relative properties of elements based on the patterns of electrons in the outermost energy level of atoms.",
             grade_level: ["HS"],
             standard_ids: ["4","22","12"] 
         },
         
         {   code: "HS-PS1-2",
-            name: "Matter and its Interactions",
+            name: "Matter and Its Interactions",
             description: "Construct and revise an explanation for the outcome of a simple chemical reaction based on the outermost electron states of atoms, trends in the period table, and knowledge of the patterns of chemical properties.",
             grade_level: ["HS"],
             standard_ids: ["8","22","23","12"] 
         },
         
         {   code: "HS-PS1-3",
-            name: "Matter and it Interactions",
+            name: "Matter and Its Interactions",
             description: "Plan and conduct an investigation to gather evidence to compare the structure of substances at the bulk scale to infer the strenth of electrical forces between particles.",
             grade_level: ["HS"],
             standard_ids: ["5","21","22","12"] 
         },
         
         {   code: "HS-PS1-4",
-            name: "Matter and its Interactions",
+            name: "Matter and Its Interactions",
             description: "Develop a model to illustrate that the release or absorption of energy from a chemical reaction system depends upon the changes in total bond energy.",
             grade_level: ["HS"],
             standard_ids: ["4","21","22","16"] 
         },
         
         {   code: "HS-PS1-5",
-            name: "Matter and its Interactions",
+            name: "Matter and Its Interactions",
             description: "Apply scientific principles and evidence to provide an explanation about the effects of changing the temperature or concentration of the reacting particles on the rate at which a reaction occurs.",
             grade_level: ["HS"],
             standard_ids: ["8","22","12"] 
         },
         
         {   code: "HS-PS1-6",
-            name: "Matter and its Interactions",
+            name: "Matter and Its Interactions",
             description: "Refine the design of a chemical system by specifying a change in conditions that would produce increased amounts of products at equilibrium.*",
             grade_level: ["HS"],
             standard_ids: ["8","22","77","18"] 
         },
         
         {   code: "HS-PS1-7",
-            name: "Matter and its Interactions",
+            name: "Matter and Its Interactions",
             description: "Use mathematical representations to support the claim that atoms, and therefore mass, are conserved during a chemical reaction.",
             grade_level: ["HS"],
             standard_ids: ["7","22","16"] 
         },
         
         {   code: "HS-PS1-8",
-            name: "Matter and its Interactions",
+            name: "Matter and Its Interactions",
             description: "Develop models to illustrate the changes in the composition of the nucleus of the atom and the energy released during the processes of fission, fusion, and radioactive decay.",
             grade_level: ["HS"],
             standard_ids: ["4","23","16"] 
@@ -1260,42 +1260,42 @@ PerfExp.create(
         },
         
         {   code: "HS-PS4-",
-            name: "Waves and their Applications in Technologies for Information Transfer",
+            name: "Waves and Their Applications in Technologies for Information Transfer",
             description: "",
             grade_level: ["HS"],
             standard_ids: [""] 
         },
         
         {   code: "HS-PS4-1",
-            name: "Waves and their Applications in Technologies for Information Transfer",
+            name: "Waves and Their Applications in Technologies for Information Transfer",
             description: "Use mathematical representations to support a claim regarding relationships among the frequency, wavelength, and speed of waves traveling in various media. ",
             grade_level: ["HS"],
             standard_ids: ["7","35","13"] 
         },
         
         {   code: "HS-PS4-2",
-            name: "Waves and their Applications in Technologies for Information Transfer",
+            name: "Waves and Their Applications in Technologies for Information Transfer",
             description: "Evaluate questions about the advantages of using a digital transmission and storage of information.",
             grade_level: ["HS"],
             standard_ids: ["3","35","18"] 
         },
         
         {   code: "HS-PS4-3",
-            name: "Waves and their Applications in Technologies for Information Transfer",
+            name: "Waves and Their Applications in Technologies for Information Transfer",
             description: "Evaluate the claims, evidence, and reasoning behind the idea that electromagnetic radiation can be described either by a wave model or a particle model, and that for some situations one model is more useful than the other.",
             grade_level: ["HS"],
             standard_ids: ["9","35","36","15"] 
         },
         
         {   code: "HS-PS4-4",
-            name: "Waves and their Applications in Technologies for Information Transfer",
+            name: "Waves and Their Applications in Technologies for Information Transfer",
             description: "Evaluate the validit and reliability of claims in published materials of the effects that different frequencies of electromagnetic radiation have when absorbed by matter.",
             grade_level: ["HS"],
             standard_ids: ["10","36","13"] 
         },
         
         {   code: "HS-PS4-5",
-            name: "Waves and their Applications in Technologies for Information Transfer",
+            name: "Waves and Their Applications in Technologies for Information Transfer",
             description: "Communicate technical information about how some technological devices use the principles of wave behavior and wave interactions with matter to transmit and capture information and energy.*",
             grade_level: ["HS"],
             standard_ids: ["10","33","35","36","37","13"] 
