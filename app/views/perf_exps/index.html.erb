@@ -1,8 +1,6 @@
 
 <%= @PerfExps.collect(&:name).uniq %><br>
 <%= @PerfExps.collect(&:grade_level).flatten.uniq %>
-   
-
 <div class="table-responsive">
     <table class="table">
         <tr>

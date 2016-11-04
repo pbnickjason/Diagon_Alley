@@ -1,0 +1,9 @@
+<%= @user.projects %><br>
+<% @user.projects.each do |project| %>
+    <%= project.name %>
+<% end %>
+
+<%= @user.perf_exps %><br>
+<% @user.perf_exps do |perf_exp| %>
+    <%= perf_exp.name %>
+<% end %>
