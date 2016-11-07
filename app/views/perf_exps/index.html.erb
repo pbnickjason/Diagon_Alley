@@ -1,6 +1,21 @@
 
-<%= @PerfExps.collect(&:name).uniq %><br>
-<%= @PerfExps.collect(&:grade_level).flatten.uniq %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <% PerfExp.all.collect(&:grade_level).uniq.each do |lev| %>
+                <%= link_to "Grade #{lev}", perf_exps_path( :grade_level => lev ) %><br>
+            <% end %>
+        </div>
+        <div class="col-md-6">
+            <% PerfExp.all.collect(&:name).uniq.each do |nem| %>
+                <%= link_to nem, perf_exps_path( :name => nem ) %><br>
+            <% end %>
+        </div>
+    </div>
+</div>
+
+<br>
+
 <div class="table-responsive">
     <table class="table">
         <tr>
@@ -16,7 +31,7 @@
                 <td class="text-nowrap"><%= pe.code %></td>
                 <td class="text-nowrap"><%= pe.name %></td>
                 <td><%= pe.description %></td>
-                <td><%= pe.grade_level*", " %></td>
+                <td><%= pe.grade_level %></td>
                 <td><%= pe.id %></td>
                 <td class="text-nowrap">
                     <% pe.standards.each do |s| %>

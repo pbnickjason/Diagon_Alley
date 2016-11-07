@@ -5,7 +5,9 @@ class PerfExpsController < ApplicationController
     end
     
     def index
-        @PerfExps = PerfExp.all
+        @PerfExps = PerfExp.where(nil)
+        @PerfExps = @PerfExps.grade_level(params[:grade_level]) if params[:grade_level].present?
+        @PerfExps = @PerfExps.named(params[:name]) if params[:name].present?
     end
     
     def create
