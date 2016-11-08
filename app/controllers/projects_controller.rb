@@ -4,24 +4,26 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    all_projects = Project.all
-    if params[:search]
-      all_projects = Project.search(params[:search])
-    end
-    @projects = Array.new
-    begin
-        @subject = Subject.find(params[:subject])
-        all_projects.each do |project|
-            if project.tags.include?(@subject.name)
-                @projects << project
+
+    @projects = Project.all
+
+    @projects = Project.include_perf_exps(params[:perf_exp_ids]) if params[:perf_exp_ids].present?
+    @projects = Project.search(params[:search]) if params[:search].present?
+
+    if params[:subject].present?
+        @projects_by_subject = []
+        begin
+            @subject = Subject.find(params[:subject])
+            Project.all.each do |project|
+                @projects_by_subject << project if project.tags.include?(@subject.name)
             end 
+        rescue ActiveRecord::RecordNotFound
+            #if params[:subject].nil?
+                @projects_by_subject = @projects
+            #else
+                #not_found
+            #end
         end
-    rescue ActiveRecord::RecordNotFound
-        #if params[:subject].nil?
-            @projects = all_projects
-        #else
-        #    not_found
-        #end
     end
   end
 
@@ -117,7 +119,7 @@ class ProjectsController < ApplicationController
     
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:title, :description, :contents, :price, :summary, :instructions, :standard_ids => [])
+      params.require(:project).permit(:title, :description, :contents, :price, :summary, :instructions, :standard_ids => [], :perf_exp_ids => [])
     end
     
     def not_found

@@ -1,28 +1,8 @@
 <!-- this will eventually need different flow controls for different standard sets but for now assumes NGSS -->
 
-<h3>Standards:</h3>
-
-<h4>Scientific and Engineering Practices:</h4>
-<% @project.standards.each do |s| %>
-    <% if s.path.include?("SEP") %>
-        <h6><%= s.path + ": " + s.description %></h6>
-    <% end %>
-<% end %>
-    
-<br>
-
-<h4>Crosscutting Practices:</h4>
-<% @project.standards.each do |s| %>
-    <% if s.path.include?("CC") %>
-        <h6><%= s.path + ": " + s.description %></h6>
-    <% end %>
+<h3>Performance Expectations:</h3>
+<% @project.perf_exps.each do |pe| %>
+    <h4><%= pe.code + ": " + pe.name %></h4>
+    <h3><%= pe.description %></h3>
 <% end %>
 
-<br>
-
-<h4>Disciplinary Core Ideas:</h4>
-<% @project.standards.each do |s| %>
-    <% if s.path.include?("DCI") %>
-        <h6><%= s.path + ": " + s.description %></h6>
-    <% end %>
-<% end %>

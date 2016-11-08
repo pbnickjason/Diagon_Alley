@@ -54,8 +54,19 @@
 
 <br>
 
-<%= f.collection_check_boxes(:standard_ids, Standard.all, :id, :path) do |b| %>
-<%= b.label {b.check_box + b.text} %><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <%= f.collection_check_boxes(:standard_ids, Standard.all, :id, :path) do |b| %>
+                <%= b.label {b.check_box + b.text} %><br>
+            <% end %>
+        </div>
+        <div class="col-md-6">
+            <%= f.collection_check_boxes(:perf_exp_ids, PerfExp.all, :id, :code) do |p| %>
+                <%= p.label {p.check_box + p.text} %><br>
+            <% end %>
+        </div>
+    </div
+</div>
 <% end %>
 
-<% end %>

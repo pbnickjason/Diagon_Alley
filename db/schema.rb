@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161026201714) do
+ActiveRecord::Schema.define(version: 20161107224346) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 20161026201714) do
     t.string   "code"
     t.string   "grade_level"
   end
+
+  create_table "perf_exps_projects", id: false, force: :cascade do |t|
+    t.integer "perf_exp_id", null: false
+    t.integer "project_id",  null: false
+  end
+
+  add_index "perf_exps_projects", ["perf_exp_id"], name: "index_perf_exps_projects_on_perf_exp_id", using: :btree
+  add_index "perf_exps_projects", ["project_id"], name: "index_perf_exps_projects_on_project_id", using: :btree
 
   create_table "perf_exps_standards", id: false, force: :cascade do |t|
     t.integer "standard_id", null: false

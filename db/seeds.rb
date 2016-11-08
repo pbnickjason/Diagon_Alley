@@ -1259,13 +1259,6 @@ PerfExp.create(
             standard_ids: ["4","32","13"] 
         },
         
-        {   code: "HS-PS4-",
-            name: "Waves and Their Applications in Technologies for Information Transfer",
-            description: "",
-            grade_level: "HS",
-            standard_ids: [""] 
-        },
-        
         {   code: "HS-PS4-1",
             name: "Waves and Their Applications in Technologies for Information Transfer",
             description: "Use mathematical representations to support a claim regarding relationships among the frequency, wavelength, and speed of waves traveling in various media. ",
@@ -1289,7 +1282,7 @@ PerfExp.create(
         
         {   code: "HS-PS4-4",
             name: "Waves and Their Applications in Technologies for Information Transfer",
-            description: "Evaluate the validit and reliability of claims in published materials of the effects that different frequencies of electromagnetic radiation have when absorbed by matter.",
+            description: "Evaluate the validity and reliability of claims in published materials of the effects that different frequencies of electromagnetic radiation have when absorbed by matter.",
             grade_level: "HS",
             standard_ids: ["10","36","13"] 
         },
@@ -1651,7 +1644,7 @@ Project.create(
     
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg',
     
-    standard_ids: ["4", "8", "18", "31"]
+    perf_exp_ids: ["156"]
     )
 
 Project.create(

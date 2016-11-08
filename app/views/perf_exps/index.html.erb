@@ -15,20 +15,27 @@
 </div>
 
 <br>
+<%= link_to "Reset Filter", perf_exps_path %>
+<br>
 
 <div class="table-responsive">
     <table class="table">
         <tr>
             <th>code</th>
+            <th>projects.any?</th>
+            <th>projects_path( :perf_exp_ids => pe.id )</th>
             <th>name</th>
             <th>descriptiondescriptiondescriptiondescription</th>
             <th>grade_level</th>
             <th>id</th>
             <th>standard.id standard.path: standard.description</th>
+            <th>project_ids</th>
         </tr>
         <% @PerfExps.each do |pe| %>
             <tr>
                 <td class="text-nowrap"><%= pe.code %></td>
+                <td><%= pe.projects.any? %></td>
+                <td><%= link_to "link_to projects", projects_path( :perf_exp_ids => pe.id ) %></td>
                 <td class="text-nowrap"><%= pe.name %></td>
                 <td><%= pe.description %></td>
                 <td><%= pe.grade_level %></td>
@@ -38,6 +45,7 @@
                     <%= s.id.to_s + " " + s.path + ": " + s.description %><br>
                     <% end %>
                 </td>
+                <td><%= pe.project_ids %></td>
             </tr>
         <% end %>
     </table>
