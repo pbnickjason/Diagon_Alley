@@ -41,9 +41,8 @@ body {
 }
 
 hr {
-  border-color: $blue;
-  border-width: 3px;
-  max-width: 50px;
+  border-color: white;
+  border-width: 1px;
 }
 
 .btn {
@@ -978,4 +977,6 @@ height: 24px;
   }
 }
 
-
+.margin-right {
+    margin-right: 10%;
+}
