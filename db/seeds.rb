@@ -1640,7 +1640,7 @@ Project.create(
     
     instructions: 'Here are instruction to guild you through designing and constructing the Tesla coil and driver', 
     
-    tags: ['Engineering & Design'],
+    tags: ["3"],
     
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg',
     
@@ -1660,7 +1660,7 @@ Project.create(
     
     instructions: 'How to build a city',
     
-    tags: ['Earth Science', 'Engineering & Design'],
+    tags: ["4", "3"],
     
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
@@ -1678,7 +1678,7 @@ Project.create(
     
     instructions: 'How to mess with sasquatch',
     
-    tags:['Life Science'],
+    tags:["5"],
     
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
@@ -1696,7 +1696,7 @@ Project.create(
     
     instructions: 'How to space.',
     
-    tags:['Space & Physics'],
+    tags:["1"],
     
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
@@ -1714,7 +1714,7 @@ Project.create(
     
     instructions: 'How to build a rocket',
     
-    tags:['Space & Physics', 'Engineering & Design'],
+    tags:["1", "3"],
     
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
@@ -1732,7 +1732,7 @@ Project.create(
     
     instructions: 'How to build a drone.',
     
-    tags:['Robotics & Computer Science'],
+    tags:["2"],
     
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
@@ -1750,7 +1750,7 @@ Project.create(
     
     instructions: 'How to chemistry.',
     
-    tags:['Chemistry'],
+    tags:["6"],
     
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )

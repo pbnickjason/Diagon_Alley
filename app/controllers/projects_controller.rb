@@ -4,27 +4,8 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-
     @projects = Project.all
-
-    @projects = Project.include_perf_exps(params[:perf_exp_ids]) if params[:perf_exp_ids].present?
-    @projects = Project.search(params[:search]) if params[:search].present?
-
-    if params[:subject].present?
-        @projects_by_subject = []
-        begin
-            @subject = Subject.find(params[:subject])
-            Project.all.each do |project|
-                @projects_by_subject << project if project.tags.include?(@subject.name)
-            end 
-        rescue ActiveRecord::RecordNotFound
-            #if params[:subject].nil?
-                @projects_by_subject = @projects
-            #else
-                #not_found
-            #end
-        end
-    end
+    @subjects = Subject.all
   end
 
   # GET /projects/1

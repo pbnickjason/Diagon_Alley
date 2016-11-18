@@ -12,12 +12,25 @@
 				</span>
 				</center>
 				<span>
-		<label for="default" class="btn btn-info" style="background: rgba(34,85,170, 0.8); width:100%;text-align:right;">Space & Physics <input type="checkbox" id="default" class="badgebox"><span class="badge">&check;</span></label>
-        <label for="primary" class="btn btn-info" style="background: rgba(235,56,18,0.8); width:100%;text-align:right;">Robotics & Comp. Science <input type="checkbox" id="primary" class="badgebox"><span class="badge">&check;</span></label>
-        <label for="info" class="btn btn-info" style="background: rgba(34,211,214, 0.8); width:100%;text-align:right;">Engineering & Design <input type="checkbox" id="info" class="badgebox"><span class="badge">&check;</span></label>
-        <label for="success" class="btn btn-info" style="background: rgba(237,140,28,0.8); width:100%;text-align:right;">Earth Science <input type="checkbox" id="success" class="badgebox"><span class="badge">&check;</span></label>
-        <label for="warning" class="btn btn-info" style="background: rgba(23,122,43, 0.8); width:100%;text-align:right;">Life Science <input type="checkbox" id="warning" class="badgebox"><span class="badge">&check;</span></label>
-        <label for="danger" class="btn btn-info" style="background: rgba(108,18,163, 0.8); width:100%;text-align:right;">Chemistry <input type="checkbox" id="danger" class="badgebox"><span class="badge">&check;</span></label>
+                    
+                    <% @subjects.each do |subject| %>
+                    
+                    <label for=<%=subject.name%> class="btn btn-info subfield" style="background: <%=subject.color%>; width:100%;text-align:right;"><%=subject.name%><input type="checkbox" checked id=<%=subject.name%> class="badgebox" value=<%=subject.id%>><span class="badge">&check;</span></label>
+                    
+                    <% end %>
+                    <!--
+                    <label for="default" class="btn btn-info" style="background: rgba(34,85,170, 0.8); width:100%;text-align:right;">Space & Physics <input type="checkbox" id="default" class="badgebox"><span class="badge">&check;</span></label>
+                    
+                    <label for="primary" class="btn btn-info" style="background: rgba(235,56,18,0.8); width:100%;text-align:right;">Robotics & Comp. Science <input type="checkbox" id="primary" class="badgebox"><span class="badge">&check;</span></label>
+                    
+                    <label for="info" class="btn btn-info" style="background: rgba(34,211,214, 0.8); width:100%;text-align:right;">Engineering & Design <input type="checkbox" id="info" class="badgebox"><span class="badge">&check;</span></label>
+                    
+                    <label for="success" class="btn btn-info" style="background: rgba(237,140,28,0.8); width:100%;text-align:right;">Earth Science <input type="checkbox" id="success" class="badgebox"><span class="badge">&check;</span></label>
+                    
+                    <label for="warning" class="btn btn-info" style="background: rgba(23,122,43, 0.8); width:100%;text-align:right;">Life Science <input type="checkbox" id="warning" class="badgebox"><span class="badge">&check;</span></label>
+                    
+                    <label for="danger" class="btn btn-info" style="background: rgba(108,18,163, 0.8); width:100%;text-align:right;">Chemistry <input type="checkbox" id="danger" class="badgebox"><span class="badge">&check;</span></label>
+                    -->
 				</span>
                 
 				
