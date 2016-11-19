@@ -6,6 +6,9 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
     @subjects = Subject.all
+    if params[:subject].present?
+        @selected_subject = Subject.find(params[:subject]);
+    end
   end
 
   # GET /projects/1

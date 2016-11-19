@@ -13,10 +13,22 @@
 				</center>
 				<span>
                     
-                    <% @subjects.each do |subject| %>
+                    <% @subjects.each do |sub| %>
                     
-                    <label for=<%=subject.name%> class="btn btn-info subfield" style="background: <%=subject.color%>; width:100%;text-align:right;"><%=subject.name%><input type="checkbox" checked id=<%=subject.name%> class="badgebox" value=<%=subject.id%>><span class="badge">&check;</span></label>
+                    <%if defined?(@selected_subject)%>
+                    <%if sub == @selected_subject%>
                     
+                    <label for=<%=sub.name%> class="btn btn-info subfield" style="background: <%=sub.color%>; width:100%;text-align:right;"><%=sub.name%><input type="checkbox" checked id=<%=sub.name%> class="badgebox" value=<%=sub.id%>><span class="badge">&check;</span></label>
+                    
+                    <% else %>
+                    
+                    <label for=<%=sub.name%> class="btn btn-info subfield" style="background: <%=sub.color%>; width:100%;text-align:right;"><%=sub.name%><input type="checkbox" !checked id=<%=sub.name%> class="badgebox" value=<%=sub.id%>><span class="badge">&check;</span></label>
+                    
+                    <% end %>
+                    <% else %>
+                    
+                    <label for=<%=sub.name%> class="btn btn-info subfield" style="background: <%=sub.color%>; width:100%;text-align:right;"><%=sub.name%><input type="checkbox" checked id=<%=sub.name%> class="badgebox" value=<%=sub.id%>><span class="badge">&check;</span></label>
+                    <% end %>
                     <% end %>
                     <!--
                     <label for="default" class="btn btn-info" style="background: rgba(34,85,170, 0.8); width:100%;text-align:right;">Space & Physics <input type="checkbox" id="default" class="badgebox"><span class="badge">&check;</span></label>
