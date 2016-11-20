@@ -1,11 +1,13 @@
 var projects = document.getElementsByClassName("project-panel");
 var tagedSubjectSelected = [];
 var within_grade = [];
+var search_hit = [];
 
 // Init filters
 for(var i = 0; i < projects.length; i++){
     tagedSubjectSelected[i] = false;
     within_grade[i] = true;
+    search_hit[i] = true;
 }
 
 /*** Subject Filter **/
@@ -63,9 +65,35 @@ $('#ex2').on('slideStop', function(slideEvt) {
     refreshProjectList();
   });
 
+/*** Search bar **/
+var searchBar = document.getElementById("search");
+
+searchBar.onfocus = function(e){
+    if(this.value==this.defaultValue){
+        this.value=""; this.style.color="#000"; 
+    }
+}
+searchBar.onblur = function(e){
+    if(this.value==""){
+        this.value=this.defaultValue; this.style.color="#888";
+    }
+}
+searchBar.oninput = function(e){
+    for(var i = 0; i < projects.length; i++){
+        var projectTitle = projects[i].getElementsByClassName("project-title")[0].innerHTML;
+        var projectSummary = projects[i].getElementsByClassName("project-summary")[0].innerHTML;
+        if(projectTitle.toLowerCase().indexOf(this.value.toLowerCase()) != -1 || projectSummary.toLowerCase().indexOf(this.value.toLowerCase()) != -1){
+            search_hit[i] = true;
+        }else{
+            search_hit[i] = false;
+        }
+    }
+    refreshProjectList();
+}
+
 /*** Combine Filter Results ***/
 function refreshProjectList(){
     for(var i = 0; i < projects.length; i++){
-        projects[i].hidden = !(tagedSubjectSelected[i] && within_grade[i]);
+        projects[i].hidden = !(tagedSubjectSelected[i] && within_grade[i] && search_hit[i]);
     }
 }
