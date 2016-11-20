@@ -1642,6 +1642,8 @@ Project.create(
     
     tags: ["3"],
     
+    grade_level: "7-12",
+    
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg',
     
     perf_exp_ids: ["156"]
@@ -1662,6 +1664,8 @@ Project.create(
     
     tags: ["4", "3"],
     
+    grade_level: "9-12",
+    
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
 
@@ -1679,6 +1683,8 @@ Project.create(
     instructions: 'How to mess with sasquatch',
     
     tags:["5"],
+    
+    grade_level: "4",
     
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
@@ -1698,6 +1704,8 @@ Project.create(
     
     tags:["1"],
     
+    grade_level: "5-6",
+    
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
 
@@ -1715,6 +1723,8 @@ Project.create(
     instructions: 'How to build a rocket',
     
     tags:["1", "3"],
+    
+    grade_level: "0-3",
     
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
@@ -1734,6 +1744,8 @@ Project.create(
     
     tags:["2"],
     
+    grade_level: "9-12",
+    
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )
 
@@ -1751,6 +1763,8 @@ Project.create(
     instructions: 'How to chemistry.',
     
     tags:["6"],
+    
+    grade_level: "9-12",
     
     image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/project_images/SlayerCircuit.jpg'
     )

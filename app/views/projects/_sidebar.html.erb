@@ -41,14 +41,13 @@
 				</span>
 				<br><br>
 				<span style="background:transparent;">
-				<%= text_field_tag "ex2", nil, type: 'text',class:'input-large',
+				<%= text_field_tag "ex2", nil, type: 'text',class:'input-large grade-slider',
                  data: {'slider-id' => 'ex1Slider',
                         'slider-min' => '0',
                         'slider-max' => '12',
                         'slider-step' => '1',
                         'slider-value' => '[0,12]' }%>
-                   <!--<input type="text" class="slider" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="vertical" data-slider-selection="after"data-slider-tooltip="hide">-->
-
+                    <div class="slider-value-container" id="ex2SliderVal"></div>
 				</span>
 				</center>
 
