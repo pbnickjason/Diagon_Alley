@@ -39,7 +39,7 @@
                             <h4 class="project-title"><%= project.title %></h4>
                             <p class="project-summary"><%=project.summary%></p>
                             <p2>(tags)</p2>
-                            <p3>$<%=project.price%></p3>
+                            <p3 class="project-price">$<%=project.price%></p3>
                         </div>
                         </a>
                         <% project.tags.each do |tag| %>
@@ -54,7 +54,7 @@
     <%= button_to 'New Project', new_project_path, :class =>'btn btn-primary', :method => :get %> </div>
     </section>
     </div>
-    
+    <%= javascript_include_tag "projects_nav", 'data-turbolinks-track' => true %>
 </body>
 
 <!-- <button type="button" class="btn btn-primary btn-lg btn-block"><%= link_to 'New Project', new_project_path %></button> -->

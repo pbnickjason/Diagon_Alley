@@ -729,6 +729,7 @@ html { height: 100%;}
 /*-------------------------------*/
 
 .hamburger {
+  visibility: hidden;
   position: fixed;
   top: 10px;  
   z-index: 999;

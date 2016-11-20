@@ -2,12 +2,14 @@ var projects = document.getElementsByClassName("project-panel");
 var tagedSubjectSelected = [];
 var within_grade = [];
 var search_hit = [];
+var within_max_price = [];
 
 // Init filters
 for(var i = 0; i < projects.length; i++){
     tagedSubjectSelected[i] = false;
     within_grade[i] = true;
     search_hit[i] = true;
+    within_max_price[i] = true;
 }
 
 /*** Subject Filter **/
@@ -91,9 +93,28 @@ searchBar.oninput = function(e){
     refreshProjectList();
 }
 
+/*** Price Filter ***/
+var price_filter = document.getElementById('price-filter');
+price_filter.oninput = function(e){
+    if(parseFloat(this.value)){
+        if(parseFloat(this.value) < 0) this.value = 0;
+        for(var i = 0; i < projects.length; i++){
+            var project_price = parseFloat(projects[i].getElementsByClassName("project-price")[0].innerHTML.substr(1));
+            within_max_price[i] = this.value > project_price;
+            
+        }
+    }else{
+        for(var i = 0; i < projects.length; i++){
+            within_max_price[i] = true;
+        }
+    }
+    refreshProjectList();
+}
+
+
 /*** Combine Filter Results ***/
 function refreshProjectList(){
     for(var i = 0; i < projects.length; i++){
-        projects[i].hidden = !(tagedSubjectSelected[i] && within_grade[i] && search_hit[i]);
+        projects[i].hidden = !(tagedSubjectSelected[i] && within_grade[i] && search_hit[i] * within_max_price[i]);
     }
 }
