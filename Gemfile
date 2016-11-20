@@ -51,7 +51,10 @@ group :development do
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'pg'
-
+    
+gem 'jquery-ui-rails'
+gem 'jquery-ui-sass-rails'
+    
 gem 'bootstrap-slider-rails'  
     
 gem 'aws-sdk'
