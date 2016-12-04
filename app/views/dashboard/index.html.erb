@@ -1,9 +1,41 @@
-<%= @user.projects %><br>
-<% @user.projects.each do |project| %>
-    <%= project.title %>
-<% end %>
 
-<%= @user.perf_exps %><br>
-<% @user.perf_exps do |perf_exp| %>
-    <%= perf_exp.name %>
-<% end %>
+<div class="container">
+
+    <% PerfExp.all.collect(&:grade_level).uniq.each do |grade_level| %>
+
+        <h1 class="text-center"><%= "Grade Level: " + grade_level %></h1>
+    
+       <div class="row">
+            <div class="col-md-6 text-right">Projects</div>
+            <div class="col-md-6 text-left">Performance Expectations</div>
+
+            <% @user.projects.grade_level(grade_level).each do |project| %>
+                <div class="col-md-6 text-right">
+                    <%= link_to "#{project.title}", project_path(project.id) %>
+                </div>
+                <div class="col-md-6 text-left">
+                    <% project.perf_exps.each do |perf_exp| %>
+                        <% @covered_perf_exps << perf_exp %>
+                        <%= perf_exp.code + ": " + perf_exp.name %><br>
+                    <% end %>
+                </div>                
+            <% end %>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6 text-right">Outstanding Performance Expectations</div>
+            <div class="col-md-6 text-left">Links to Projects</div>
+            
+            <% @perf_exps.grade_level(grade_level).excluding(@covered_perf_exps).each do |perf_exp2| %>
+                <div class="col-md-6 text-right">
+                    <%= perf_exp2.code %>
+                </div>
+                <div class="col-md-6 text-left">
+                    <%= link_to "Pick a project!", projects_path( :perf_exp_ids => perf_exp2.id ) %>
+                </div>
+            <% end %>
+        </div>    
+    
+    <% end %>
+
+</div>

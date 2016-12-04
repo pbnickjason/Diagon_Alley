@@ -16,4 +16,6 @@ class Project < ActiveRecord::Base
         return members
     end
 
+    scope :grade_level, -> (grade_level) { where grade_level: grade_level }
+
 end
