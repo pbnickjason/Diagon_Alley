@@ -32,6 +32,11 @@ will reseed the database
   2. <tt>AWS_SECRET_ACCESS_KEY=</tt> (generated secret key)
   3. <tt>AWS_REGION=us-west-2</tt>
 
+== Helpful Commands
+
+* rake tmp:cache:clear
+clears out the cache, useful for debugging problems which arise on initial page load
+
 * Deployment instructions
 
 * ...

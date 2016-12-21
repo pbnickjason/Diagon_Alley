@@ -1,2 +1,2 @@
-//= require_tree ./projects_nav
 //= require bootstrap-slider
+//= require_tree ./projects_nav
