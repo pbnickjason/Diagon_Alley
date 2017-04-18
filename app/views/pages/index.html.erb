@@ -4,7 +4,11 @@
 <!-- Testing was done on the following resolutions: 2560x1440, 1920x1080, 1366x768, 360x640-->
 
 <div style="text-align:center">
-
+    
+    <div style="margin-left:50px;margin-right:50px">
+        
+    </div>
+    
     <div class="jumbotron">
         <div class="container">
           <h1>Empowering Project-Based-Learning <small><br>K-12 STEM Project Kits for Teachers</small></h1>
@@ -32,40 +36,8 @@
 
         </div>
     </div>
-
-    <div class="jumbotron">
-        <div class="container">
-            <h1>Get Explorious <small><br>Pick a subject below! </small></h1>
-        </div>
-    </div>
-
-    <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <% @subjects.each do |subject| %>
-                    <div class="col-lg-4 col-sm-6">
-                        <%=link_to projects_path(:subject => subject.id), :class => 'portfolio-box' do %>
-                            <img src=<%=subject.image%> class="img-responsive" alt="">
-                            <div class="ghost-title" style = "background: <%= subject.color %>;"> 
-                                <%= subject.name %> 
-                            </div>
-                            <div class="portfolio-box-caption" style = "background: <%= subject.color %>"> 
-                                <div class="portfolio-box-caption-content" >
-                                    <div class="project-category text-faded">
-                                        <%=subject.name%>
-                                    </div>
-                                    <div class="project-name">
-                                        Explore Curriculum-Integrated Projects
-                                    </div>
-                                </div>
-                            </div>
-                        <% end %>
-                    </div>
-                <% end %>
-            </div>
-        </div>
-    </section>
-
+    <img src=<%= @image %>>
+    <p><%= @title %></p>
     <div class="jumbotron">
         <div class="container">
             <h1>How about us? <small><br>Here's why we do this</small></h1>
