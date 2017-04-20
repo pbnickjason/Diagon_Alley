@@ -2,59 +2,41 @@
 <head>
 </head>
 <body>
-    <div id="wrapper">
-        <%= render 'sidebar' %>
+    <div class="col-sm-6 col-sm-offset-3">
     </div>
-    <div id="page-content-wrapper">
-        <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
-            <span class="hamb-top"></span>
-            <span class="hamb-middle"></span>
-            <span class="hamb-bottom"></span>
-            <span class="hamburger-label">Refine Search</span>
-        </button>
-        
-                
-        <div class="col-sm-6 col-sm-offset-3">
-            <h1 style="text-align: center">All Projects</h1>
-        </div>
-        <div class="col-sm-3">
-            <input type="search" id="search" value="search" style="color:#888"/>
-        </div>
-
-
+    <div class="col-sm-3">
+        <input type="search" id="search" value="search" style="color:#888"/>
+    </div>
     <!-- Tiles -->
     <section id="tile" class="bg-light-gray">
-            <div class="container">
-            <% @projects.each do |project| %>
-                    <div class="col-md-4 col-sm-6 tile-item project-panel">
-                        <a href=<%= project_path(project) %> class="tile-link"><!-- data-toggle="modal"-->
-                            <div class="tile-hover">
-                                <div class="tile-hover-content">
-                                    <i class="fa fa-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src= <%= project.image %> class="img-responsive" alt="">
-
-                        <div class="tile-caption">
-                            <h4 class="project-title"><%= project.title %></h4>
-                            <p class="project-summary"><%=project.summary%></p>
-                            <p2>(tags)</p2>
-                            <p3>$<%=project.price%></p3>
+        <div class="container">
+        <% @projects.each do |project| %>
+            <div class="col-md-4 col-sm-6 tile-item project-panel">
+                <a href=<%= project_path(project) %> class="tile-link"><!-- data-toggle="modal"-->
+                    <div class="tile-hover">
+                        <div class="tile-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
                         </div>
-                        </a>
-                        <% project.tags.each do |tag| %>
-                        <div class="tag" hidden><%=tag%></div>
-                        <% end %>
-                        <div class="grade-level" hidden><%=project.grade_level%></div>
                     </div>
-
-                    <% end %>
-            </div>
-    <div class = "col-sm-12 col-md-offset-3">
-    <%= button_to 'New Project', new_project_path, :class =>'btn btn-primary', :method => :get %> </div>
+                    <img src= <%= project.image %> class="img-responsive" alt="">
+                    <div class="tile-caption">
+                        <h4 class="project-title"><%= project.title %></h4>
+                        <p class="project-summary"><%=project.summary%></p>
+                        <p2>(tags)</p2>
+                        <p3>$<%=project.price%></p3>
+                    </div>
+                </a>
+                <% project.tags.each do |tag| %>
+                    <div class="tag" hidden><%=tag%></div>
+                <% end %>
+                <div class="grade-level" hidden><%=project.grade_level%></div>
+                </div>
+            <% end %>
+        </div>
+        <div class = "col-sm-12 col-md-offset-3">
+            <%= button_to 'New Project', new_project_path, :class =>'btn btn-primary', :method => :get %>
+        </div>
     </section>
-    </div>
-    
 </body>
 
 <!-- <button type="button" class="btn btn-primary btn-lg btn-block"><%= link_to 'New Project', new_project_path %></button> -->

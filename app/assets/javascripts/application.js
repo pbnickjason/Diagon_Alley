@@ -16,5 +16,4 @@
 //= require bootstrap
 //= require jquery.turbolinks
 //= require turbolinks
-//= require_tree ./projects_nav
 //= require bootstrap-slider
