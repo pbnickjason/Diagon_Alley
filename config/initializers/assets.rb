@@ -15,3 +15,4 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.js_compressor = :uglifier
 
 Rails.application.config.assets.precompile += %w( news_feed.js )
+require "#{Rails.root}/lib/panel.rb"

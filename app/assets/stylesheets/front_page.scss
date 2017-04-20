@@ -1,0 +1,39 @@
+.front-page-panel-container {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.front-page-panel {
+    position: relative;
+    width: 50vw;
+    display: inline-block;
+    color: black;
+}
+
+.panel-img {
+    /*display: block;*/
+    display:block;
+    height:100%;
+    width: 100%;
+    box-shadow: inset 0 0 10px #000000;
+}
+
+.panel-title{
+    position: absolute;
+    z-index: 1000;
+    top: 5px;
+    right: 5px;
+    padding: 3px;
+}
+
+.panel-text{
+    position: absolute;
+    max-width: 35%;
+    max-height: 30%;
+    z-index: 1000;
+    bottom: 5px;
+    right: 5px;
+    padding: 3px;
+}

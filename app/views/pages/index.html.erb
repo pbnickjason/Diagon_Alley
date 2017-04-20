@@ -5,8 +5,12 @@
 
 <div style="text-align:center">
     
-    <div style="margin-left:50px;margin-right:50px">
-        
+    <div class="front-page-panel-container">
+        <div class="front-page-panel">
+            <img class="panel-img" src=<%= @panel.image_address %>>
+            <div class="panel-title" style="color:<%= @panel.title_color %>; font-family:<%= @panel.title_font %>"><%= @panel.title %></div>
+            <div class="panel-text" style="color:<%= @panel.text_color %>; font-family:<%= @panel.text_font %>"><%= @panel.text %></div>
+        </div>
     </div>
     
     <div class="jumbotron">
@@ -36,8 +40,6 @@
 
         </div>
     </div>
-    <img src=<%= @image %>>
-    <p><%= @title %></p>
     <div class="jumbotron">
         <div class="container">
             <h1>How about us? <small><br>Here's why we do this</small></h1>
@@ -57,3 +59,7 @@
     </div>
 
 </div>
+<script type="text/javascript" type="text/javascript">
+    image = document.getElementsByClassName("front-page-panel");
+    image[0].style.height = (image[0].offsetWidth * (2/3)) + "px";
+</script>
