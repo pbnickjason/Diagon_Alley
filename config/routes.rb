@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   match "/404", :to => "errors#not_found", :via => :all
   match "/422", :to => "errors#reject", :via => :all
   match "/500", :to => "errors#unexpected", :via => :all
+  get "*all" => "pages#index"
   #get "*all", via: :all, to: "errors#unexpected"
 
     resources :standards

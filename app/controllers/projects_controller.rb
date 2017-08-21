@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_filter :page_restrict
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /projects

@@ -1,4 +1,5 @@
 class PerfExpsController < ApplicationController
+  before_filter :page_restrict
 
     def new
         @PerfExp = PerfExp.new

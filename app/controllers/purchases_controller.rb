@@ -1,4 +1,5 @@
 class PurchasesController < ApplicationController
+  before_filter :page_restrict
     protect_from_forgery with: :null_session
         
     def myCart
