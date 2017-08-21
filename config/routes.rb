@@ -6,14 +6,14 @@ Rails.application.routes.draw do
   root 'pages#index'
   get "pages/about" => "pages#about"
   
-  get "projects/:id" => "projects#index"
-  get "/workspace/:id" => "workspace#index", as: :workspace
-  get "projects/added/:id" => "projects#added", as: :added
+  #get "projects/:id" => "projects#index"
+  #get "/workspace/:id" => "workspace#index", as: :workspace
+  #get "projects/added/:id" => "projects#added", as: :added
   
-  get "/purchases/myCart" => "purchases#myCart"
-  get "/purchases/checkout" => "purchases#checkout"
-  post "/purchases/completed" => "purchases#completed"
-  get "purchases/added/:id" => "purchases#added"
+  #get "/purchases/myCart" => "purchases#myCart"
+  #get "/purchases/checkout" => "purchases#checkout"
+  #post "/purchases/completed" => "purchases#completed"
+  #get "purchases/added/:id" => "purchases#added"
   
   #get "*path", via: :all, to: "errors#not_found"
   match "/404", :to => "errors#not_found", :via => :all
