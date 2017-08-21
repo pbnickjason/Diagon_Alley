@@ -1,57 +1,73 @@
 <h1 style="text-align: center"> About Page </h1>
 
 <link rel="stylesheet" href="/droplet.css"/>
+<style>
+  .button {
+  display: inline-block;
+  border-radius: 3px;
+  background: #dddddd;
+  border: 1px solid lightGrey;
+}
 
-<div class="container">
-<div class="row">
-    <div class="col-xs-6">
-      <select class="form-control" id="language-select">
-        <option value="javascript">JavaScript</option>
-        <option value="c_cpp">ANSI C</option>
-        <option value="html">HTML</option>
-        <option value="coffeescript">CoffeeScript</option>
-      </select>
-    </div>
-    <div class="col-xs-6">
-      <button class="btn btn-primary" id="toggle">Toggle Blocks</button>
-    </div>
-  </div><br/>
-  <div id="editor-wrapper" style="position:relative;width:100%;height:500px;border: 1px solid black;">
-    <div id="editor"></div>
-  </div>
-</div>
-<a id="save-button">
-  <div class="button">
-    <div class="button-text">Save Script</div>
-  </div>
-</a>
-<a id="execute-button">
-  <div class="button">
-    <div class="button-text">Execute</div>
-  </div>
-</a>
+.button:hover {
+  cursor: pointer;
+  background: #aaaaaa;
+}
 
+.button-text {
+  padding: 2px;
+  color: #666666;
+}
+
+.demo-window {
+  position: relative;
+  background: #3cb5f9;
+  padding: 40px;
+  border: 5px solid lightgrey;
+  border-radius: 4pt;
+}
+
+.tab-label {
+  position: absolute;
+  top: -28px;
+  left 0px;
+  width: 150px;
+  height: 28px;
+  background: lightgrey;
+  border-radius: 4pt;
+  text-align: center;
+  color: black;
+}
+
+#execute-button {
+  float: right;
+  margin: 5px;
+}
+</style>
 <script src="/ace.js"></script>
 <script src="/droplet-full.js"></script>
 <script src="/droplet_block_definitions.js"></script>
+<div class="container">
+  <div class="row">
+    <div class="demo-window">
+      <div class="tab-label">Robot Code Editor</div>
+      <div id="editor-wrapper" style="position:relative;width:100%;height:500px;border: 1px solid black;">
+        <div id="editor"></div>
+      </div>
+      <a id="execute-button">
+        <div class="button">
+          <div class="button-text">Execute</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
 <script>
+window.onload = function() {
 var sessions = {};
 var editor = new droplet.Editor(document.getElementById('editor'), modes['javascript']);
-document.getElementById('toggle').addEventListener('click', function() {
-  editor.toggleBlocks();
-});
-document.getElementById('language-select').addEventListener('change', function() {
-  if (this.value in sessions) {
-    console.log("hit");
-    editor.aceEditor.setSession(sessions[this.value]);
-  }
-  else {
-    var newSession = sessions[this.value] = ace.createEditSession('', 'ace/mode/' + this.value);
-    editor.aceEditor.setSession(newSession);
-    editor.bindNewSession(modes[this.value]);
-  }
-});
   init_text = "var ros = ros_init();\nvar velTopic = new_topic(ros, 'cmd_vel', 'geometry_msgs/Twist');\nfunction step1() {\n  var twist_msg = geometry_msgs_Twist(ros, 0.3, 0, 0, 0, 0, 0);\n  velTopic.publish(twist_msg);\n}\nfunction step2() {\n  var twist_msg = geometry_msgs_Twist(ros, 0, 0, 0, 0, 0, -0.4);\n  velTopic.publish(twist_msg);\n}\nfunction step3() {\n  var twist_msg = geometry_msgs_Twist(ros, 0, 0, 0, 0, 0, 0);\n  velTopic.publish(twist_msg);\n}\nsetTimeout(step1, 1000);\nsetTimeout(step2, 2000);\nsetTimeout(step3, 3000);";
 editor.setValue(init_text);
+}
 </script>
 
