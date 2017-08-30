@@ -29,6 +29,17 @@
 
 
 html,
+header nav a {
+      line-height: 150px;
+      margin-left: 20px;
+      color: black; /*#9fdbfc*/
+      font-weight: 700;
+      font-size: 18px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
 body {
   background-color: black;
   height: 100%;
