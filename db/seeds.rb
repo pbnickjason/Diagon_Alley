@@ -22,6 +22,8 @@ Subject.create(name: 'Earth Science', image: 'https://s3-us-west-2.amazonaws.com
 Subject.create(name: 'Life Science', image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/subject_images/Turtle.jpg',color: 'rgba(23,122,43, 0.8)')
 Subject.create(name: 'Chemistry', image: 'https://s3-us-west-2.amazonaws.com/diagon-alley-devel-storage/subject_images/Luminol.jpg',color: 'rgba(108,18,163, 0.8)')
 
+Admin.create(email: 'admin@explorio.us', password: 'supersecretpassword')
+
 Standard.create(
     name: 'NGSS', description: 'Next Generation Science Standards', :children_attributes => { 
         1 => { name: "SEP", description: "Scientific and Engineering Practices", :children_attributes => {  

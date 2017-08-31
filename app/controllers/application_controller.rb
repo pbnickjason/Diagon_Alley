@@ -8,7 +8,9 @@ class ApplicationController < ActionController::Base
 	protected
         
         def page_restrict
-                redirect_to('/')
+                unless admin_signed_in?
+                    redirect_to('/')
+                end
         end
         
 	def configure_permitted_parameters
